@@ -1,0 +1,2 @@
+serviceClass: veebirakendus.client.GreetingService
+path: C0DC39C5A4F444419F8530EFFDB4DD2B.gwt.rpc
