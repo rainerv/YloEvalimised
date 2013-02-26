@@ -25,13 +25,62 @@ h1 {
 	font-family: Calibri;
 }
 
+h2 {
+	text-align:center;
+	margin-top:30px;
+	font-family:Calibri;
+}
+h3 {
+	text-align:left;
+	font-family:Calibri;
+}
+
+#esileht {
+	font-family:Calibri;
+	text-align:center;
+}
+#abileht {
+	font-family:Calibri;
+	text-align:left;
+}
+#minuandmedleht {
+	margin-left:10px;
+	height:200px;
+	width:200px;
+	float:left;	
+}
+
 .navbar {
 	margin-top: 10px;
 	text-align:center;
 }
 
-#abiButton {
+#clickedButton {
 	width:120px;
 	background-color:lightsalmon;
 	
+}
+
+#defaultButton {
+	width: 120px;
+	background-color:lightyellow;
+}
+
+#statistikaMenu {
+	height:200px;
+	width:50px;
+	float:left;
+}
+
+#statkandidaadidleht {
+	margin-left:100px;
+	height:200px;
+	width:100px;
+	float:left;
+}
+
+#printButton {
+	width:120px;
+	background-color:dodgerblue;
+	float:right;
 }

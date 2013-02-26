@@ -19,14 +19,14 @@
 
 
 <div class="navbar">
-<button onclick="window.location.href='minuandmed.html'" style="width:120px;background-color:lightsalmon; ">Minu andmed</button> &nbsp;
-<button onclick="window.location.href='statistika.html'"style="width:120px;background-color:lightyellow">Statistika</button> &nbsp;
-<button onclick="window.location.href='kandidaadid.html'"style="width:120px;background-color:lightyellow">Kandidaadid</button> &nbsp;
-<button onclick="window.location.href='abi.html'"style="width:120px;background-color:lightyellow"">Abi</button> &nbsp;
-  <button onclick="window.location.href='esileht.html'"style="width:120px;background-color:lightyellow"">Alguslehele</button> &nbsp;
+<button id="clickedButton" onclick="window.location.href='minuandmed.html'">Minu andmed</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='statistika.html'">Statistika</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='kandidaadid.html'">Kandidaadid</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='abi.html'">Abi</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='esileht.html'">Alguslehele</button> &nbsp;
 <hr class="navbar"></div>
       
-<div style="margin-left:10px;height:200px;width:200px;float:left;">
+<div id="minuandmedleht">
 <ul>
 <li><b>Nimi:</b></li>
 <li><b>Piirkond:</b></li>
@@ -37,8 +37,8 @@
 </ul> 
 </div>
 
-<div style="height:200px">
-
+<div id="minuandmedleht">
+<ul>
 Mart Mardiste<br>
 Piirkond valimata!<br>
 Andmata!<br>
