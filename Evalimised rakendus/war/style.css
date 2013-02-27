@@ -46,14 +46,14 @@ h3 {
 #minuandmedleht {
 	margin-left:10px;
 	height:200px;
-	width:200px;
+	
 	float:left;	
 }
 
 .navbar {
 	margin-top: 10px;
 	text-align:center;
-}
+	}
 
 #clickedButton {
 	width:120px;
@@ -74,13 +74,49 @@ h3 {
 
 #statkandidaadidleht {
 	margin-left:100px;
-	height:200px;
-	width:100px;
-	float:left;
+	text-align:center;
+	
+}
+
+
+#statkandidaadidleht2 {
+	margin-top:30px;
+	text-align:left;
+	margin-left:200px;
 }
 
 #printButton {
 	width:120px;
 	background-color:dodgerblue;
 	float:right;
+}
+#piirkondValikud {
+	text-align:center;
+}
+#piirkondleht {
+	text-align:center;
+}
+
+#printpealkiri {
+	margin-top:30px;
+	text-align:center;
+	font-family:Calibri;
+	font-size:250%;
+}
+
+#printleht {
+	text-align:center;
+	align:center;
+}
+
+table.center {
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+th,td {
+border: 1px solid;
+padding: 8px;
 }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link  type="text/css" rel="stylesheet" href="style.css">
+   
+    <title>E-valimiste koduleht</title>
+	
+
+  </head>
+
+
+  <body>
+
+   
+      
+<div id="header">
+<h1>E-valimiste projekt</h1></div>
+
+
+<div class="navbar">
+<button id="clickedButton" onclick="window.location.href='minuandmed.html'">Minu andmed</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='statistika.html'">Statistika</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='kandidaadid.html'">Kandidaadid</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='abi.html'">Abi</button> &nbsp;
+<button id="defaultButton" onclick="window.location.href='esileht.html'">Alguslehele</button> &nbsp;
+<hr class="navbar"></div>
+    
+    
+<div id="piirkondleht">
+Valige endale piirkond.
+</div>   
+   
+<div id="piirkondValikud">
+<select id="piirkonnad" onchange="run()">
+  <option value="Ringkond1">Haabersti,Kristiine,Põhja-Tallinn</option>
+  <option value="Ringkond2">Kesklinn,Lasnamäe,Pirita</option>
+  <option value="Ringkond3">Mustamäe,Nõmme</option>
+  <option value="Ringkond4">Harju,Rapla</option>
+  <option value="Ringkond5">Hiiu,Lääne,Saare</option>
+  <option value="Ringkond6">Lääne-Viru</option>
+  <option value="Ringkond7">Ida-Viru</option>
+  <option value="Ringkond8">Järva,Viljandi</option>
+  <option value="Ringkond9">Jõgeva,Tartu</option>
+  <option value="Ringkond10">Tartu linn</option>
+  <option value="Ringkond11">Võru,Valga,Põlva</option>
+  <option value="Ringkond12">Pärnu</option>
+  
+</select>
+
+<button id="defaultButton" onclick="window.location.href='minuandmed.html'">Vali</button> &nbsp;
+</div>
+
+<div>
+<script>
+ function run() {
+	var dop =  document.getElementById("piirkonnad").value;
+ }
+</script>
+</div>
+
+</body>
+</html>

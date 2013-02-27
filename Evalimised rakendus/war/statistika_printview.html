@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -6,15 +7,60 @@
      
     </head>
 <body>
-<h1>E-valimiste projekt</h1>
+<div id="printpealkiri">E-Valimiste projekt</div>
 <h2>Prindivaade</h2>
 
-<div id="statkandidaadidleht">
-Jooksev statistika seisuga [timestamp] kogu riigi lõikes.
+<div id="printleht">
+<script type="text/javascript">
+<!-- 
+today = new Date(); 
+hours=today.getHours();
+minutes=today.getMinutes();
+if(minutes<10) {
+	minutes="0"+today.getMinutes();
+}
+else {
+	minutes=today.getMinutes();
+}
+
+document.write("Jooksev üleriiklik statistika seisuga ");
+document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
+document.write(hours,":",minutes); 
+
+
+//--> 
+</script> 
+
+
+<table class="center">
+<tr>
+<td>Nimi</td>
+<td>Piirkond</td>
+<td>Hääli</td>
+</tr>
+<tr>
+<td>Meelis Mehine</td>
+<td>Pärnu</td>
+<td>5743</td>
+</tr>
+<tr>
+<td>Mihkel Kuusk</td>
+<td>Harju,Rapla</td>
+<td>3242</td>
+</tr>
+<tr>
+<td>Leida Seenele</td>
+<td>Jõgeva,Tartu</td>
+<td>1232</td>
+</tr>
+<tr>
+<td>Edgar Suusk</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>5211</td>
+</tr>
+</table>
 </div>
 
-<div id="statkandidaadidleht">
 
-Siia tuleb statistika.
-</div>
-</body>         
+</body>   
+</html>      
