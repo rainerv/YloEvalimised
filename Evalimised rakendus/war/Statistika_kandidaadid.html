@@ -37,15 +37,91 @@
 </div>
 
 <div id="statkandidaadidleht">
-Jooksev statistika enim hääli kogunud kandidaatide kohta seisuga [timestamp] kogu riigi lõikes.
-</div>
+<script language="javascript"> 
+<!-- 
+today = new Date(); 
+hours=today.getHours();
+minutes=today.getMinutes();
+if(minutes<10) {
+	minutes="0"+today.getMinutes();
+}
+else {
+	minutes=today.getMinutes();
+}
 
-<div id="statkandidaadidleht">
+document.write("Jooksev üleriiklik statistika seisuga ");
+document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
+document.write(hours,":",minutes); 
 
-Siia tuleb statistika.
-</div>
-      
+
+//--> 
+</script> 
 <button id="printButton" onclick="window.location.href='statistika_kandidaadid_printview.html'">Prindivaade</button> &nbsp;<br>
+</div>
 
+<div id="statkandidaadidleht2">
+<table>
+<tr>
+<td>Nimi</td>
+<td>Piirkond</td>
+<td>Erakond</td>
+<td>Hääli</td>
+</tr>
+<tr>
+<td>Meelis Mehine</td>
+<td>Pärnu</td>
+<td>Keskerakond</td>
+<td>5743</td>
+</tr>
+<tr>
+<td>Leida Seenele</td>
+<td>Jõgeva,Tartu</td>
+<td>Reformierakond</td>
+<td>1232</td>
+</tr>
+<tr>
+<td>Edgar Suusk</td>
+<td>Jõgeva,Tartu</td>
+<td>Keskerakond</td>
+<td>5211</td>
+</tr>
+<tr>
+<td>Peeter Kaks</td>
+<td>Mustamäe,Nõmme</td>
+<td>IRL</td>
+<td>4324</td>
+</tr>
+<tr>
+<td>Ülo Üllar</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>Rohelised</td>
+<td>334</td>
+</tr>
+<tr>
+<td>Ann Pann</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>IRL</td>
+<td>5912</td>
+</tr>
+<tr>
+<td>Andrus Pansip</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>Reformierakond</td>
+<td>3424</td>
+</tr>
+<tr>
+<td>Kalle Nelinurk</td>
+<td>Mustamäe,Nõmme</td>
+<td>Keskerakond</td>
+<td>4111</td>
+</tr>
+<tr>
+<td>Mihkel Kuusk</td>
+<td>Pärnu</td>
+<td>IRL</td>
+<td>3242</td>
+</tr>
+</table>
+</div>
 </body>      
 </html>   
