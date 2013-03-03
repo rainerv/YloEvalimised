@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -35,20 +36,74 @@
 </div>
 
 <div id="statkandidaadidleht">
-Jooksev statistika seisuga [timestamp] piirkondade lõikes.<br>
-<ul>
-<li><a>Harjumaa</a></li>
-<li><a>Tartumaa</a></li>
-<li><a>Pärnumaa</a></li>
-<li><a>...</a></li>
-</ul> 
+<script language="javascript"> 
+<!-- 
+today = new Date(); 
+hours=today.getHours();
+minutes=today.getMinutes();
+if(minutes<10) {
+	minutes="0"+today.getMinutes();
+}
+else {
+	minutes=today.getMinutes();
+}
+
+document.write("Jooksev üleriiklik statistika seisuga ");
+document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
+document.write(hours,":",minutes); 
+
+
+//--> 
+</script> 
+<button id="printButton" onclick="window.location.href='statistika_printview.html'">Prindivaade</button> &nbsp;<br>
 </div>
 
-<div id="statkandidaadidleht">
-
-Siia tuleb statistika.
+<div id="statkandidaadidleht2">
+<table>
+<tr>
+<td>Nimi</td>
+<td>Piirkond</td>
+<td>Hääli</td>
+</tr>
+<tr>
+<td>Meelis Mehine</td>
+<td>Pärnu</td>
+<td>5743</td>
+</tr>
+<tr>
+<td>Mihkel Kuusk</td>
+<td>Pärnu</td>
+<td>3242</td>
+</tr>
+<tr>
+<td>Leida Seenele</td>
+<td>Jõgeva,Tartu</td>
+<td>1232</td>
+</tr>
+<tr>
+<td>Edgar Suusk</td>
+<td>Jõgeva,Tartu</td>
+<td>5211</td>
+</tr>
+<tr>
+<td>Ülo Üllar</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>334</td>
+</tr>
+<tr>
+<td>Ann Pann</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>5912</td>
+</tr>
+<tr>
+<td>Andrus Pansip</td>
+<td>Haabersti,Kristiine,Põhja-Tallinn</td>
+<td>3424</td>
+</tr>
+</table>
 </div>
       
-<button id="printButton" onclick="window.location.href='statistika_piirkonnad_printview.html'">Prindivaade</button> &nbsp;<br>
 
-</body>         
+</body>       
+</html>
+  
