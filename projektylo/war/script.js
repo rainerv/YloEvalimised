@@ -61,5 +61,8 @@ $(document).ready(function()
 	
 	
 	//piirkonna funktsioon lõpp
-	
+		  
+		   // facebook login asjad
+		   
+		   //facebook login asjad lõpp
 });
