@@ -8,7 +8,7 @@ body
 .main
 {
 	margin:60px auto 0 auto;
-	width:50%
+	width:50%;
 }
 
 .tabs li
@@ -45,6 +45,7 @@ body
 	background:lightyellow;
 	padding:20px 20px 20px 20px;
 	color:#666666;
+	height:100%;
 }
 
 ul.tabs
@@ -149,4 +150,56 @@ valimata
 #piirkondModal {
 	 colspan:2; 
 	 padding-left: 15px;
+}
+.sideMenu
+{
+	width:20%;
+}
+
+.statPiirkondContent
+{
+	display:none;
+	margin-top:-10%;
+	margin-left:20%;	
+}
+
+.statErakondContent 
+{
+	display:none;
+	margin-top:-10%;
+	margin-left:20%;
+}
+
+.statKandidaadidContent
+{
+	display:none;
+	margin-top:-10%;
+	margin-left:20%;
+}
+
+.statRiiklikContent
+{
+	display:none;
+	margin-top:-10%;
+	margin-left:20%;
+}
+
+#statPiirkond
+{
+	background-color:lightyellow;
+}
+
+#statErakond
+{
+	background-color:lightyellow;
+}
+
+#statKandidaadid
+{
+	background-color:lightyellow;
+}
+
+#statRiiklik
+{
+	background-color:lightyellow;
 }
