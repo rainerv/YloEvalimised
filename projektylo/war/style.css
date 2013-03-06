@@ -159,28 +159,24 @@ valimata
 .statPiirkondContent
 {
 	display:none;
-	margin-top:-10%;
 	margin-left:20%;	
 }
 
 .statErakondContent 
 {
 	display:none;
-	margin-top:-10%;
 	margin-left:20%;
 }
 
 .statKandidaadidContent
 {
 	display:none;
-	margin-top:-10%;
 	margin-left:20%;
 }
 
 .statRiiklikContent
 {
 	display:none;
-	margin-top:-10%;
 	margin-left:20%;
 }
 
@@ -203,3 +199,14 @@ valimata
 {
 	background-color:lightyellow;
 }
+
+#kuvaKandidaadid
+{
+	background-color:lightyellow;
+}
+
+.contentHead 
+{
+	text-align:center;
+}
+
