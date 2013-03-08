@@ -10,6 +10,9 @@
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
 	<script src="jquery.tidy.table.min.js"></script>
 	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
+	<script>
+	
+	</script>
 </head>
 <body>
 	<div class="main">
@@ -57,12 +60,19 @@
 					<b>E-post: </b>ülo@ülo.com  <a href="http://www.google.com">Muuda!	</a><br>
 					<b>Telefon: </b>999-954-1956  <a href="http://www.google.com">Muuda!</a>
 				</div>
-				<div class="logiSisse">
-					<input type="button" id="logiSisseButton" value="Logi sisse">
+				
+				
+				<div class="logiAndmed">
+					<form name="logiForm">
+						<p>Kasutajanimi: <input type="text" name="username"></p>
+						<p>Parool: <input type="password" name="pword"></p>
+						<input type="button" value="Logi sisse" name="Submit" class="logiSisse">
+						Logimiseks kasutajanimi: Kasutaja ja parool: Parool
+					</form>
 				</div>
-				<div class="logiV2lja">
-					<input type="button" id="logiV2ljaButton" value="Logi välja">
-				</div>
+				<input type="button" value="Logi välja" class="logiV2lja">
+				
+				
 			</div>
 			<div class="tab3 tabsContent">
 				<div class="content">
@@ -139,7 +149,7 @@
 				</div>
 			</div>
 			<div class="tab5 tabsContent">
-			
+			<!--
 				<div><h3>1. Kuidas hääletada</h3></div>
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige kandidaatide alt sobiv</div>
@@ -147,7 +157,7 @@
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige piirkond</div>
 				<div>Lõpuks kandideerige oma piirkonda</div>
-				
+				-->
 				
 			</div>
 		</div>

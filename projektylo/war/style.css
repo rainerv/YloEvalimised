@@ -215,20 +215,16 @@ valimata
 	display:none;
 }
 
+
+.logiSisse
+{
+	background-color:lightyellow;
+}
+
 .logiV2lja
 {
+	background-color:lightyellow;
 	display:none;
 }
-
-#logiSisseButton
-{
-	background-color:lightyellow;
-}
-
-#logiV2ljaButton
-{
-	background-color:lightyellow;
-}
-
 
 

@@ -13,20 +13,44 @@ $(document).ready(function()
 	});
 	
 	
-	$('div.logiSisse').click(function()
+	//sdada
+	$('.logiSisse').click(function()
+	
 	{
-		$('div.andmedContent').show();
-		$('div.logiSisse').hide();
-		$('div.logiV2lja').show();
+		
+		var un = document.logiForm.username.value;
+		var pw = document.logiForm.pword.value;
+		var valid = false;
+		
+		var unArray=["Kasutaja"];
+		var pwArray=["Parool"];
+		
+		for(var i=0;i<unArray.length; i++) {
+			if((un==unArray[i]) && (pw==pwArray[i])){
+				valid = true;
+				break;
+			}
+		}
+		if(valid) {
+			$('div.andmedContent').show();
+			$('div.logiAndmed').hide();
+			$('.logiV2lja').show();
+			return false;
+		}
+		
 	});
 	
-	$('div.logiV2lja').click(function()
-			{
-				$('div.andmedContent').hide();
-				$('div.logiSisse').show();
-				$('div.logiV2lja').hide();
-			});
+	$('.logiV2lja').click(function()
+	{
+		$('div.andmedContent').hide();
+		$('div.logiAndmed').show();
+		$('.logiV2lja').hide();
+		document.logiForm.username.value="";
+		document.logiForm.pword.value="";
+	});
 	
+	
+	//sdasda
 	
 	
 	
