@@ -37,6 +37,9 @@ $(document).ready(function()
 			$('.logiV2lja').show();
 			return false;
 		}
+		else {
+			alert("Vale parool ja/või kasutajanimi");
+		}
 		
 	});
 	
