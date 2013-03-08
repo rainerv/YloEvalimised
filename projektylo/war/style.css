@@ -210,5 +210,25 @@ valimata
 	width:95%;
 }
 
+.andmedContent
+{
+	display:none;
+}
+
+.logiV2lja
+{
+	display:none;
+}
+
+#logiSisseButton
+{
+	background-color:lightyellow;
+}
+
+#logiV2ljaButton
+{
+	background-color:lightyellow;
+}
+
 
 

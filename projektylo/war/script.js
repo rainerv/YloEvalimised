@@ -12,6 +12,25 @@ $(document).ready(function()
 		$(this).addClass('tab-current');
 	});
 	
+	
+	$('div.logiSisse').click(function()
+	{
+		$('div.andmedContent').show();
+		$('div.logiSisse').hide();
+		$('div.logiV2lja').show();
+	});
+	
+	$('div.logiV2lja').click(function()
+			{
+				$('div.andmedContent').hide();
+				$('div.logiSisse').show();
+				$('div.logiV2lja').hide();
+			});
+	
+	
+	
+	
+	
 	$('div.statPiirkondContent').hide();
 	$('div.statErakondContent').hide();
 	$('div.statKandidaadidContent').hide();
