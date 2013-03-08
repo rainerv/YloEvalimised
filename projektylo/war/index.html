@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+	<script src="jquery.tidy.table.min.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -62,69 +63,9 @@
 				<!-- <input type="button" id="kuvaKandidaadid" value="Kuva kandidaadid" onclick=show(id)/>/" -->
 			</div>
 			
-<div class="tab3 tabsContent">
-
-
-	<link rel="stylesheet" type="text/css" href="jquery.tidy.table.min.css">
-
-	
-
-
-	
-
-	<script src="jquery.tidy.table.min.js"></script>
-	<script>
-	$(document).ready(function() {
-		$('#container')
-			.TidyTable({
-				enableCheckbox : false,
-				enableMenu     : false
-			},
-			{
-				columnTitles : ['Id','Nimi','Erakond','Häälte_arv'],
-				columnValues : [
-					['1','E.Savi','Keskerakond','352'],
-					['2','N.Eeger','Reform','235235'],
-					['3','J.uut','Gaasi','35463'],
-					['4','V.alge','Isamaa','4632'],
-					['5','P.ott','Emamaa','5753']
-				],
-				 menuOptions : [
-					['- Action -', null],
-					['Callback 1', { callback : doSomething1 }],
-					['Callback 2', { callback : doSomething2 }]
-				]
-			}, doSomething3); 
-	}); 
-
-	
-	  function doSomething1(rows) {
-		alert('callback1(rows=' + rows.length + "')");
-	}
-
-	function doSomething2(rows) {
-		alert('callback2(rows=' + rows.length + "')");
-	}
-
-	function doSomething3(name, value) {
-		alert("callback(name='" + name + "', value='" + value + "')");
-	} 
-	</script>
-
-	
-  
-<div id="container">
-
-
-</div>
-
-
-
-
-
-   
-
-</div>
+			<div class="tab3 tabsContent">
+			<div id="container"></div>
+			</div>
 			<div class="tab4 tabsContent">
 				<div class="sideMenu">
 					<input type="button" id="statPiirkond" value="Piirkondlik"/></br>

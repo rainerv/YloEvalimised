@@ -101,4 +101,44 @@ $(document).ready(function()
 		   // facebook login asjad
 		   
 		   //facebook login asjad lõpp
+		   
+		   //kandidaadid lehe funk
+		   
+		   
+				$('#container')
+					.TidyTable({
+						enableCheckbox : false,
+						enableMenu     : false
+					},
+					{
+						columnTitles : ['Id','Nimi','Erakond','H22led'],
+						columnValues : [
+							['1','E.Savi','Keskerakond','352'],
+							['2','N.Eeger','Reform','235235'],
+							['3','J.uut','Gaasi','35463'],
+							['4','V.alge','Isamaa','4632'],
+							['5','P.ott','Emamaa','5753']
+						],
+						 menuOptions : [
+							['- Action -', null],
+							['Callback 1', { callback : doSomething1 }],
+							['Callback 2', { callback : doSomething2 }]
+						]
+					}, doSomething3); 
+			
+
+			
+			  function doSomething1(rows) {
+				alert('callback1(rows=' + rows.length + "')");
+			}
+
+			function doSomething2(rows) {
+				alert('callback2(rows=' + rows.length + "')");
+			}
+
+			function doSomething3(name, value) {
+				alert("callback(name='" + name + "', value='" + value + "')");
+			} 
+		   
+		   //kandidaadid lehe funk lõpp
 });
