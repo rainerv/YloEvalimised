@@ -141,4 +141,5 @@ $(document).ready(function()
 			} 
 		   
 		   //kandidaadid lehe funk lõpp
+			
 });
