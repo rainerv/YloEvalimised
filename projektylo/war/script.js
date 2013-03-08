@@ -111,13 +111,13 @@ $(document).ready(function()
 						enableMenu     : false
 					},
 					{
-						columnTitles : ['Id','Nimi','Erakond','H22led'],
+						columnTitles : ['Id','Nimi','Erakond','Piirkond','H22led','Anna'],
 						columnValues : [
-							['1','E.Savi','Keskerakond','352'],
-							['2','N.Eeger','Reform','235235'],
-							['3','J.uut','Gaasi','35463'],
-							['4','V.alge','Isamaa','4632'],
-							['5','P.ott','Emamaa','5753']
+							['1','E.Savi','Keskerakond','Tartu Linn','352'],
+							['2','N.Eeger','Reform','Haabersti,Kristiine,Põhja-Tallinn','235235'],
+							['3','J.uut','Gaasi','Pärnu','35463'],
+							['4','V.alge','Isamaa','Harju,Rapla','4632'],
+							['5','P.ott','Emamaa','Ida-Viru','5753']
 						],
 						 menuOptions : [
 							['- Action -', null],
