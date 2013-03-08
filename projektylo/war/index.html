@@ -63,124 +63,67 @@
 			</div>
 			
 <div class="tab3 tabsContent">
-<SCRIPT language="javascript">
-        function addRow(tableID) {
- 
-            var table = document.getElementById(tableID);
- 
-            var rowCount = table.rows.length;
-            var row = table.insertRow(rowCount);
- 
-            var cell1 = row.insertCell(0);
-            var element1 = document.createElement("input");
-            element1.type = "checkbox";
-            element1.name="chkbox[]";
-            cell1.appendChild(element1);
- 
-            var cell2 = row.insertCell(1);
-            cell2.innerHTML = rowCount + 1;
- 
-            var cell3 = row.insertCell(2);
-            var element2 = document.createElement("input");
-            element2.type = "text";
-            element2.name = "txtbox[]";
-            cell3.appendChild(element2);
- 
- 
-        }
- 
-        function deleteRow(tableID) {
-            try {
-            var table = document.getElementById(tableID);
-            var rowCount = table.rows.length;
- 
-            for(var i=0; i<rowCount; i++) {
-                var row = table.rows[i];
-                var chkbox = row.cells[0].childNodes[0];
-                if(null != chkbox && true == chkbox.checked) {
-                    table.deleteRow(i);
-                    rowCount--;
-                    i--;
-                }
- 
- 
-            }
-            }catch(e) {
-                alert(e);
-            }
-        }
- 
-    </SCRIPT>
-    <INPUT type="button" value="Add Row" onclick="addRow('dataTable')" />
- 
-    <INPUT type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
- <div class=tab3 tabsContent>
-    <TABLE id="dataTable" width="200px" border="1">
-<tr>
-<td>Nimi</td>
-<td>Piirkond</td>
-<td>Erakond</td>
-<td>Hääl</td>
-</tr>
-</tr>
-<td>Kalle Nelinurk</td>
-<td>Mustamäe,Nõmme</td>
-<td>Keskerakond</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Meelis Mehine</td>
-<td>Pärnu</td>
-<td>Keskerakond</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Leida Seenele</td>
-<td>Jõgeva,Tartu</td>
-<td>Reformierakond</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Edgar Suusk</td>
-<td>Jõgeva,Tartu</td>
-<td>Keskerakond</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Peeter Kaks</td>
-<td>Mustamäe,Nõmme</td>
-<td>IRL</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Ülo Üllar</td>
-<td>Haabersti,Kristiine,Põhja-Tallinn</td>
-<td>Rohelised</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Ann Pann</td>
-<td>Haabersti,Kristiine,Põhja-Tallinn</td>
-<td>IRL</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Mihkel Kuusk</td>
-<td>Pärnu</td>
-<td>IRL</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>Andrus Pansip</td>
-<td>Haabersti,Kristiine,Põhja-Tallinn</td>
-<td>Reformierakond</td>
-<td><input type="checkbox"></td>
-</tr>
-</table>
 
-   </div>
+
+	<link rel="stylesheet" type="text/css" href="jquery.tidy.table.min.css">
 
 	
+
+
+	
+
+	<script src="jquery.tidy.table.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('#container')
+			.TidyTable({
+				enableCheckbox : false,
+				enableMenu     : false
+			},
+			{
+				columnTitles : ['Id','Nimi','Erakond','Häälte_arv'],
+				columnValues : [
+					['1','E.Savi','Keskerakond','352'],
+					['2','N.Eeger','Reform','235235'],
+					['3','J.uut','Gaasi','35463'],
+					['4','V.alge','Isamaa','4632'],
+					['5','P.ott','Emamaa','5753']
+				],
+				 menuOptions : [
+					['- Action -', null],
+					['Callback 1', { callback : doSomething1 }],
+					['Callback 2', { callback : doSomething2 }]
+				]
+			}, doSomething3); 
+	}); 
+
+	
+	  function doSomething1(rows) {
+		alert('callback1(rows=' + rows.length + "')");
+	}
+
+	function doSomething2(rows) {
+		alert('callback2(rows=' + rows.length + "')");
+	}
+
+	function doSomething3(name, value) {
+		alert("callback(name='" + name + "', value='" + value + "')");
+	} 
+	</script>
+
+	
+  
+<div id="container">
+
+
+</div>
+
+
+
+
+
+   
+
 </div>
 			<div class="tab4 tabsContent">
 				<div class="sideMenu">
