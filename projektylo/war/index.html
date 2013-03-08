@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="script.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
 	<script src="jquery.tidy.table.min.js"></script>
+	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
 </head>
 <body>
 	<div class="main">
@@ -42,39 +43,83 @@
 			</ul>
 			<div class="tab1 tabsContent">
 				<h2>Tere tulemast!</h2>
-				Olete leidnud tee uue E-Valimiste veebirakenduseni.</br>
-				Siin saate vaadata reaalajas statistikat hääletus tulemuste kohta.</br>
-				Lisaks saate sisse logides ennast kandidaadiks lisada ja teistele hääli anda.</br>
+				Olete leidnud tee uue E-Valimiste veebirakenduseni.<br>
+				Siin saate vaadata reaalajas statistikat hääletus tulemuste kohta.<br>
+				Lisaks saate sisse logides ennast kandidaadiks lisada ja teistele hääli anda.<br>
 				Kuidas seda kõike teha lugege abi lehelt.
 			</div>
 			<div class="tab2 tabsContent">
 				<div id="andmed">
-					<b>Nimi: </b>Ülo Üloste</br>
+					<b>Nimi: </b>Ülo Üloste<br>
 					<div id="piirkond"><b>Piirkond: </b><valimata>Piirkond valimata!</valimata><input type="button" id="valiPiirkond" value="Vali piirkond"/></div>
-					<b>Hääl: </b><input type="button" id="annaHaal" value="Anna hääl"/> </br>
+					<b>Hääl: </b><input type="button" id="annaHaal" value="Anna hääl"/> <br>
 					<div id="test"><b>Kandidatuur: </b><valimata>Piirkond valimata!</valimata></div>
-					<b>E-post: </b>ülo@ülo.com  <a href="http://www.google.com">Muuda!	</a></br>
+					<b>E-post: </b>ülo@ülo.com  <a href="http://www.google.com">Muuda!	</a><br>
 					<b>Telefon: </b>999-954-1956  <a href="http://www.google.com">Muuda!</a>
 				</div>
 				<input type="button" id="logiButton" value="Logi välja" onclick="http://www.neti.ee">
 			</div>
 			<div class="tab3 tabsContent">
-				<h4 class="contentHead">Kandidaadid</h4>
-				<!-- <input type="button" id="kuvaKandidaadid" value="Kuva kandidaadid" onclick=show(id)/>/" -->
+				<div class="content">
+					<h3>Kandidaadid</h3>
+					<table id="kandidaadidTabel">
+					<thead>
+						<tr><th>Nimi</th><th>ID</th><th filter-type="ddl">Erakond</th><th filter-type="ddl">Piirkond</th><th>Hääli</th><th filter="false">Hääleta</th></tr>
+						<tr class="filters">
+						<td><input type="text" class="filter" title="Nimi filter"></td>
+						<td><input type="text" class="filter" title="Id filter"></td>
+						<td><select class="filter">
+							<option>Vali erakond</option>
+							<option value="Keskerakond">Keskerakond</option>
+							<option value="IRL">IRL</option>
+							<option value="Reformierakond">Reformierakond</option>
+							</select></td>
+						<td><select class="filter">
+							<option>Vali piirkond</option>
+							<option value="Piirkond1">Piirkond1</option>
+							<option value="Piirkond2">Piirkond2</option>
+							<option value="Piirkond3">Piirkond3</option>
+							</select></td>
+						<td><input type="text" class="filter" title="Hääli filter"></td>
+						<td></td>
+							</tr>
+						</thead>
+						<tbody>
+						<tr style=""><td>E.Savi</td><td>1</td><td>Keskerakond</td><td>Piirkond1</td><td>5152</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>M.Ees</td><td>2</td><td>IRL</td><td>Piirkond2</td><td>52</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>N.Naine</td><td>3</td><td>Reformierakond</td><td>Piirkond2</td><td>5432</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>A.Doos</td><td>4</td><td>IRL</td><td>Piirkond1</td><td>1231</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>N.Eeger</td><td>5</td><td>Keskerakond</td><td>Piirkond3</td><td>4343</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>A.Nsip</td><td>6</td><td>Reformierakond</td><td>Piirkond3</td><td>2131</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>P.Ihlakas</td><td>7</td><td>Reformierakond</td><td>Piirkond1</td><td>322</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>A.Hmed</td><td>8</td><td>Reformierakond</td><td>Piirkond3</td><td>5997</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>V.Allo</td><td>9</td><td>Keskerakond</td><td>Piirkond2</td><td>5453</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>E.Lo</td><td>10</td><td>IRL</td><td>Piirkond2</td><td>8833</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>E.Ldur</td><td>11</td><td>IRL</td><td>Piirkond1</td><td>6574</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>P.Ildur</td><td>12</td><td>Reformierakond</td><td>Piirkond3</td><td>3932</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>K.Irves</td><td>13</td><td>Keskerakond</td><td>Piirkond2</td><td>1231</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>M.Etsik</td><td>14</td><td>Keskerakond</td><td>Piirkond3</td><td>4004</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>L.Ambikas</td><td>15</td><td>IRL</td><td>Piirkond2</td><td>2332</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>L.ooder</td><td>16</td><td>Keskerakond</td><td>Piirkond3</td><td>1020</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>M.Ats</td><td>17</td><td>Keskerakond</td><td>Piirkond2</td><td>3211</td><td><input type="button" value="Anna hääl"></td></tr>
+						<tr style=""><td>I.Gav</td><td>18</td><td>Reformierakond</td><td>Piirkond1</td><td>513</td><td><input type="button" value="Anna hääl"></td></tr>
+						</tbody>
+     					</table>
+					
+					
+				</div>
 			</div>
 			
-			<div class="tab3 tabsContent">
-			<div id="container"></div>
-			</div>
+			
 			<div class="tab4 tabsContent">
 				<div class="sideMenu">
-					<input type="button" id="statPiirkond" value="Piirkondlik"/></br>
-					<input type="button" id="statErakond" value="Erakondlik"/></br>
-					<input type="button" id="statKandidaadid" value="Kandidaadid"/></br>
-					<input type="button" id="statRiiklik" value="Üleriiklik"/></br>
+					<input type="button" id="statPiirkond" value="Piirkondlik"/><br>
+					<input type="button" id="statErakond" value="Erakondlik"/><br>
+					<input type="button" id="statKandidaadid" value="Kandidaadid"/><br>
+					<input type="button" id="statRiiklik" value="Üleriiklik"/><br>
 				</div>
 				<div class="statPiirkondContent">
-					Tekst siia 
+					<div id="cont"></div>
 				</div>
 				<div class="statErakondContent">
 					Erakondlik

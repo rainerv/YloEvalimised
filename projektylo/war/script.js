@@ -105,7 +105,7 @@ $(document).ready(function()
 		   //kandidaadid lehe funk
 		   
 		   
-				$('#container')
+				$('#cont')
 					.TidyTable({
 						enableCheckbox : false,
 						enableMenu     : false
@@ -141,5 +141,23 @@ $(document).ready(function()
 			} 
 		   
 		   //kandidaadid lehe funk lõpp
+			// kandidaadid script algus
 			
+			var options= {
+					matchingRow: function(state, tr, textTokens) {
+						if(!state || !state.id) {
+							return true;
+						}
+						var child = tr.children('td:eq(2)');
+						if(!child) return true;
+						var val = child.text();
+						switch(state.id) {
+						default:
+							return true;
+						}
+					}
+			};
+			$('#kandidaadidTabel').tableFilter(options);
+			
+			// kandidaadid script lõpp
 });
