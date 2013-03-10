@@ -10,6 +10,28 @@
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
 	<script src="jquery.tidy.table.min.js"></script>
 	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
+	<script src="sorttable.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Erakond', 'Häälte arv'],
+          ['IRL', 19022],
+          ['Keskerakond', 24414],
+          ['Reformierakond', 18327]
+          
+        ]);
+
+        var options = {
+          title: 'Häälte jagunemine erakondlikult'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 	<script>
 	
 	</script>
@@ -133,23 +155,68 @@
 					<input type="button" id="statKandidaadid" value="Kandidaadid"/><br>
 					<input type="button" id="statRiiklik" value="Üleriiklik"/><br>
 				</div>
+				
 				<div class="statPiirkondContent">
-					<div id="cont"></div>
-				</div>
+					<div id="piirkondTabel">
+					<table class="sortable">
+
+					<thead>	
+						<tr><th>Piirkond</th><th>Hääli</th></tr>
+					<tbody>
+					
+						<tr style=""><td>Piirkond1</td><td>5152</td></tr>
+						<tr style=""><td>Piirkond2</td><td>52</td></tr>
+						<tr style=""><td>Piirkond2</td><td>5432</td></tr>
+						<tr style=""><td>Piirkond1</td><td>1231</td></tr>
+						<tr style=""><td>Piirkond3</td><td>4343</td></tr>
+						<tr style=""><td>Piirkond3</td><td>2131</td></tr>
+						<tr style=""><td>Piirkond1</td><td>322</td>></tr>
+						<tr style=""><td>Piirkond3</td><td>5997</td></tr>
+						<tr style=""><td>Piirkond2</td><td>5453</td></tr>
+						<tr style=""><td>Piirkond2</td><td>8833</td></tr>
+						<tr style=""><td>Piirkond1</td><td>6574</td></tr>
+						<tr style=""><td>Piirkond3</td><td>3932</td></tr>
+						<tr style=""><td>Piirkond2</td><td>1231</td></tr>
+						<tr style=""><td>Piirkond3</td><td>4004</td></tr>
+						<tr style=""><td>Piirkond2</td><td>2332</td></tr>
+						<tr style=""><td>Piirkond3</td><td>1020</td></tr>
+						<tr style=""><td>Piirkond2</td><td>3211</td></tr>
+						<tr style=""><td>Piirkond1</td><td>513</td></tr>		
+					</tbody>
+					</table>
+					
+	</div>
+</div>
+				
+				
+				
+				
+				
 				<div class="statErakondContent">
-					Erakondlik
+				<div id="chart_div" style="width: 500px; height: 300px;"></div>
+		
 				</div>
+				
 				<div class="statKandidaadidContent">
-					Kandidaadid
+			
 				</div>
+				
 				<div class="statRiiklikContent">
 					<h2>Üleriiklik</h2>
 					<img src="kaart.jpg"/>
 					<input type="button" id="printButton" value="Prindi"/>
 				</div>
 			</div>
+			
+			
+			
+			
+			
+			
+			
+		<!--  
 			<div class="tab5 tabsContent">
-			<!--
+			
 				<div><h3>1. Kuidas hääletada</h3></div>
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige kandidaatide alt sobiv</div>
@@ -157,12 +224,13 @@
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige piirkond</div>
 				<div>Lõpuks kandideerige oma piirkonda</div>
-				-->
 				
-			</div>
+				
+			</div>-->	
 		</div>
-	</div>
 	
+	
+			
 	<!-- Siia piirkonna dialog -->
 	<div id="overlay" class="web_dialog_overlay"></div>
 	<div id="dialog" class="web_dialog">
