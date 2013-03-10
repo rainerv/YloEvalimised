@@ -205,7 +205,14 @@ $(document).ready(function()
 			};
 			$('#kandidaadidTabel').tableFilter(options);
 			
+			
+			 $("#sulgeButton").click(function (e)
+				      {
+				         HideDialog();
+				         e.preventDefault();
+				      });
 			// kandidaadid script lõpp
+			
 			$('#chart_div')
 			  src="https://www.google.com/jsapi"
 		      google.load("visualization", "1", {packages:["corechart"]});
@@ -228,4 +235,5 @@ $(document).ready(function()
 		        chart.draw(data, options);     
 		      }
 
+			 
 });
