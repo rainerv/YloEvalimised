@@ -213,8 +213,28 @@ $(document).ready(function()
 				      });
 			// kandidaadid script lõpp
 		
-			 
-			
- 	 
+			$("chart_piir")
+			 google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Piirkond', 'Haaled'],
+          ['P1',  13792  ],
+          ['P2',  26544   ],
+          ['P3',  21427   ]
+          
+        ]);
+
+        var options = {
+          title: 'Piirkondlik haaltejagunevus',
+          backgroundColor:'transparent',
+          hAxis: {title: 'Piirkonnad', titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_piir'));
+        chart.draw(data, options);
+      }
+      
+
 			 
 });

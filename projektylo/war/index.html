@@ -16,7 +16,7 @@
 	<script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
-      backgroundColor:lightyellow; 
+       
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Erakond', 'Häälte arv'],
@@ -27,7 +27,8 @@
         ]);
 
         var options = {
-          title: 'Häälte jagunemine erakondlikult' 
+          title: 'Häälte jagunemine erakondlikult', 
+          backgroundColor:'transparent'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
@@ -36,28 +37,7 @@
         
       }
     </script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Piirkond', 'Häältearv'],
-          ['P1',  13792  ],
-          ['P2',  11712   ],
-          ['P3',  66033   ],
-          ['P4',  10304  ]
-        ]);
-
-        var options = {
-          title: 'Piirkondlik häältejagunevus',
-          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}, background: {color: 'red'}}
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_piir'));
-        chart.draw(data, options);
-      }
-    </script>
+    
 	
    
 	
@@ -184,7 +164,7 @@
 				
 				<div class="statPiirkondContent">
 				
-				<div id="chart_piir" style="width: 900px; height: 600px;"></div>
+				<div id="chart_piir" style="width: 1000px; height: 600px;"></div>
 					<!--  <div id="piirkondTabel">
 					<table class="sortable">
 
