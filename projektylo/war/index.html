@@ -4,6 +4,7 @@
 	<title>E-Valimised</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="style.css"	rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" type="text/css" media="print" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="script.js" charset="UTF-8"></script>
@@ -13,6 +14,7 @@
 	<script src="sorttable.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript">
+	
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
        
@@ -187,7 +189,7 @@ document.write(hours,":",minutes);
 				<div class="statPiirkondContent">
 				
 				<div id="chart_piir" style="width: 1000px; height: 600px;"></div>
-					
+				<a id="printButton" onclick="window.print()">Prindi</a>	
 	
 				</div>
 				
@@ -197,7 +199,7 @@ document.write(hours,":",minutes);
 				
 				<div class="statErakondContent">
 				<div id="chart_div" style="width: 500px; height: 400px;"></div>
-		
+				<a id="printButton" onclick="window.print()">Prindi</a>
 				</div>
 				
 				<div class="statKandidaadidContent">
@@ -232,13 +234,13 @@ document.write(hours,":",minutes);
 						</table>
 			
 				</div>
-				
+				<a id="printButton" onclick="window.print()">Prindi</a>
 				</div>
 				<div class="statRiiklikContent">
 				
 					<h2>Üleriiklik</h2>
 					<img src="kaart.jpg"/>
-					<input type="button" id="printButton" value="Prindi"/>
+					<a id="printButton" onclick="window.print()">Prindi</a>
 					
 				</div>
 			</div>
@@ -319,6 +321,11 @@ document.write(hours,":",minutes);
 	
 	<!-- Siin lõppeb piirkonna dialog -->
 	
+	
+	
+	
+	
+	
 	<!-- Siia erakonna dialog -->
 	
 	<!-- Siia piirkonna dialog -->
@@ -379,5 +386,7 @@ document.write(hours,":",minutes);
 	
 	
 	<!-- Kandidaadi otsingu dialog lõpp -->
+	
+	
 </body>
 </html>

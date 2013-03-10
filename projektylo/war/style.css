@@ -197,3 +197,37 @@ valimata
 	background-color:lightyellow;
 	display:none;
 }
+
+#printButton
+{
+	font-size:30px;
+	font-weight:bold;
+	color:blue;
+}
+
+@media print 
+{
+	html,body
+	{
+		visibility:hidden;
+		height:100%;
+		overflow:hidden;
+	}
+	.statKandidaadidContent,
+	.statErakondContent,
+	.statPiirkondContent,
+	.statRiiklikContent
+	
+	{
+		visibility:visible;
+		position: absolute;
+		margin-left:-15px;
+
+	}
+	
+	
+	#printButton 
+	{
+		display:none;
+	}
+}
