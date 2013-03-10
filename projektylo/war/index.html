@@ -11,26 +11,8 @@
 	<script src="jquery.tidy.table.min.js"></script>
 	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
 	<script src="sorttable.js"></script>
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Erakond', 'Häälte arv'],
-          ['IRL', 19022],
-          ['Keskerakond', 24414],
-          ['Reformierakond', 18327]
-          
-        ]);
 
-        var options = {
-          title: 'Häälte jagunemine erakondlikult'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+	
     </script>
 	<script>
 	
@@ -193,7 +175,7 @@
 				
 				
 				<div class="statErakondContent">
-				<div id="chart_div" style="width: 500px; height: 300px;"></div>
+				<div id="chart_div" style="width: 500px; height: 300px; backgroundColor:lightyellow; "></div>
 		
 				</div>
 				

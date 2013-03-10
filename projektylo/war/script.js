@@ -206,4 +206,26 @@ $(document).ready(function()
 			$('#kandidaadidTabel').tableFilter(options);
 			
 			// kandidaadid script lıpp
+			$('#chart_div')
+			  src="https://www.google.com/jsapi"
+		      google.load("visualization", "1", {packages:["corechart"]});
+		      google.setOnLoadCallback(drawChart);
+		       
+		      function drawChart() {
+		        var data = google.visualization.arrayToDataTable([
+		          ['Erakond', 'H‰‰lte arv'],
+		          ['IRL', 19022],
+		          ['Keskerakond', 24414],
+		          ['Reformierakond', 18327]
+		          
+		        ]);
+
+		        var options = {
+		          title: 'H‰‰lte jagunemine erakondlikult'
+		        };
+
+		        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+		        chart.draw(data, options);     
+		      }
+
 });
