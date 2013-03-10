@@ -235,6 +235,5 @@ $(document).ready(function()
         chart.draw(data, options);
       }
       
-
 			 
 });
