@@ -205,30 +205,17 @@ valimata
 	margin-left:20%;
 }
 
-#statPiirkond
-{
-	background-color:lightyellow;
-}
-
-#statErakond
-{
-	background-color:lightyellow;
-}
-
-#statKandidaadid
-{
-	background-color:lightyellow;
-}
-
-#statRiiklik
-{
-	background-color:lightyellow;
-}
-
+#statPiirkond,
+#kandideeriEnnast,
+#statErakond,
+#statKandidaadid,
+#statRiiklik,
 #kuvaKandidaadid
 {
 	background-color:lightyellow;
 }
+
+
 
 .filter
 {

@@ -219,9 +219,9 @@ $(document).ready(function()
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Piirkond', 'Haaled'],
-          ['P1',  13792  ],
-          ['P2',  26544   ],
-          ['P3',  21427   ]
+          ['Tartu linn',  13792  ],
+          ['Harju,Rapla',  26544   ],
+          ['Ida-Viru', 32112]
           
         ]);
 
