@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
 	<script src="jquery.tidy.table.min.js"></script>
 	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script src="sorttable.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript">
@@ -79,6 +78,7 @@
 				Lisaks saate sisse logides ennast kandidaadiks lisada ja teistele hääli anda.<br>
 				Kuidas seda kõike teha lugege abi lehelt.
 			</div>
+<!-- esilehe lõpp, andmete lehe algus -->			
 			<div class="tab2 tabsContent">
 				<div class="andmedContent">
 					<b>Nimi: </b>Ülo Üloste<br>
@@ -102,6 +102,7 @@
 				
 				
 			</div>
+<!-- andmete lehe lõpp, kandidaatide algus -->			
 			<div class="tab3 tabsContent">
 				<div class="content">
 					<h3>Kandidaadid</h3>
@@ -153,45 +154,37 @@
 				</div>
 			</div>
 			
-			
+<!-- kandidaadid lõpp, statistika algus -->			
 			<div class="tab4 tabsContent">
+			<div><h3>Statistika</h3></div>
+					
 				<div class="sideMenu">
 					<input type="button" id="statPiirkond" value="Piirkondlik"/><br>
 					<input type="button" id="statErakond" value="Erakondlik"/><br>
 					<input type="button" id="statKandidaadid" value="Kandidaadid"/><br>
 					<input type="button" id="statRiiklik" value="Üleriiklik"/><br>
 				</div>
-				
+<script language="javascript"> 
+ 
+today = new Date(); 
+hours=today.getHours();
+minutes=today.getMinutes();
+if(minutes<10) {
+	minutes="0"+today.getMinutes();
+}
+else {
+	minutes=today.getMinutes();
+}
+
+document.write("Jooksev üleriiklik statistika seisuga ");
+document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
+document.write(hours,":",minutes); 
+
+
+</script> 
 				<div class="statPiirkondContent">
 				
 				<div id="chart_piir" style="width: 1000px; height: 600px;"></div>
-					<!--  <div id="piirkondTabel">
-					<table class="sortable">
-
-					<thead>	
-						<tr><th>Piirkond</th><th>Hääli</th></tr>
-					<tbody>
-					
-						<tr style=""><td>Piirkond1</td><td>5152</td></tr>
-						<tr style=""><td>Piirkond2</td><td>52</td></tr>
-						<tr style=""><td>Piirkond2</td><td>5432</td></tr>
-						<tr style=""><td>Piirkond1</td><td>1231</td></tr>
-						<tr style=""><td>Piirkond3</td><td>4343</td></tr>
-						<tr style=""><td>Piirkond3</td><td>2131</td></tr>
-						<tr style=""><td>Piirkond1</td><td>322</td>></tr>
-						<tr style=""><td>Piirkond3</td><td>5997</td></tr>
-						<tr style=""><td>Piirkond2</td><td>5453</td></tr>
-						<tr style=""><td>Piirkond2</td><td>8833</td></tr>
-						<tr style=""><td>Piirkond1</td><td>6574</td></tr>
-						<tr style=""><td>Piirkond3</td><td>3932</td></tr>
-						<tr style=""><td>Piirkond2</td><td>1231</td></tr>
-						<tr style=""><td>Piirkond3</td><td>4004</td></tr>
-						<tr style=""><td>Piirkond2</td><td>2332</td></tr>
-						<tr style=""><td>Piirkond3</td><td>1020</td></tr>
-						<tr style=""><td>Piirkond2</td><td>3211</td></tr>
-						<tr style=""><td>Piirkond1</td><td>513</td></tr>		
-					</tbody>
-					</table>-->
 					
 	
 				</div>
@@ -246,12 +239,7 @@
 			</div>
 			
 			
-			
-			
-			
-			
-			
-		<!--  
+<!--statistika lõpp, abi lehe algus  -->
 			<div class="tab5 tabsContent">
 			
 				<div><h3>1. Kuidas hääletada</h3></div>
@@ -263,7 +251,7 @@
 				<div>Lõpuks kandideerige oma piirkonda</div>
 				
 				
-			</div>-->	
+			</div>	
 		</div>
 	
 	
