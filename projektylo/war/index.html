@@ -10,13 +10,57 @@
 	<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
 	<script src="jquery.tidy.table.min.js"></script>
 	<script type="text/javascript" src="picnet.table.filter.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script src="sorttable.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      backgroundColor:lightyellow; 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Erakond', 'Häälte arv'],
+          ['IRL', 19022],
+          ['Keskerakond', 24414],
+          ['Reformierakond', 18327]
+          
+        ]);
+
+        var options = {
+          title: 'Häälte jagunemine erakondlikult' 
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+        
+        
+      }
+    </script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Piirkond', 'Häältearv'],
+          ['P1',  13792  ],
+          ['P2',  11712   ],
+          ['P3',  66033   ],
+          ['P4',  10304  ]
+        ]);
+
+        var options = {
+          title: 'Piirkondlik häältejagunevus',
+          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}, background: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_piir'));
+        chart.draw(data, options);
+      }
+    </script>
 	
+   
 	
-    
-	<script>
-	
-	</script>
 </head>
 <body>
 	<div class="main">
@@ -139,7 +183,9 @@
 				</div>
 				
 				<div class="statPiirkondContent">
-					<div id="piirkondTabel">
+				
+				<div id="chart_piir" style="width: 900px; height: 600px;"></div>
+					<!--  <div id="piirkondTabel">
 					<table class="sortable">
 
 					<thead>	
@@ -152,7 +198,7 @@
 						<tr style=""><td>Piirkond1</td><td>1231</td></tr>
 						<tr style=""><td>Piirkond3</td><td>4343</td></tr>
 						<tr style=""><td>Piirkond3</td><td>2131</td></tr>
-						<tr style=""><td>Piirkond1</td><td>322</td></tr>
+						<tr style=""><td>Piirkond1</td><td>322</td>></tr>
 						<tr style=""><td>Piirkond3</td><td>5997</td></tr>
 						<tr style=""><td>Piirkond2</td><td>5453</td></tr>
 						<tr style=""><td>Piirkond2</td><td>8833</td></tr>
@@ -165,21 +211,50 @@
 						<tr style=""><td>Piirkond2</td><td>3211</td></tr>
 						<tr style=""><td>Piirkond1</td><td>513</td></tr>		
 					</tbody>
-					</table>
+					</table>-->
 					
-	</div>
-</div>
+	
+				</div>
 				
 				
 				
 				
 				
 				<div class="statErakondContent">
-				<div id="chart_div" style="width: 500px; height: 300px; backgroundColor:lightyellow; "></div>
+				<div id="chart_div" style="width: 500px; height: 400px;"></div>
 		
 				</div>
 				
 				<div class="statKandidaadidContent">
+				<div id="kandidaatTabel">
+					<table class="sortable">
+					
+					<thead>	
+						<tr><th>Nimi</th><th>Hääli</th></tr>
+					
+				
+				
+				<tbody>
+						<tr style=""><td>E.Savi</td><td>5152</td></tr>
+						<tr style=""><td>M.Ees</td><td>52</td></tr>
+						<tr style=""><td>N.Naine</td><td>5432</td></tr>
+						<tr style=""><td>A.Doos</td><td>1231</td></tr>
+						<tr style=""><td>N.Eeger</td><td>4343</td></tr>
+						<tr style=""><td>A.Nsip</td><td>2131</td></tr>
+						<tr style=""><td>P.Ihlakas</td><td>322</td></tr>
+						<tr style=""><td>A.Hmed</td><td>5997</td></tr>
+						<tr style=""><td>V.Allo</td><td>5453</td></tr>
+						<tr style=""><td>E.Lo</td><td>8833</td></tr>
+						<tr style=""><td>E.Ldur</td><td>6574</td></tr>
+						<tr style=""><td>P.Ildur</td><td>3932</td></tr>
+						<tr style=""><td>K.Irves</td><td>1231</td></tr>
+						<tr style=""><td>M.Etsik</td><td>4004</td></tr>
+						<tr style=""><td>L.Ambikas</td><td>2332</td></tr>
+						<tr style=""><td>L.ooder</td><td>1020</td></tr>
+						<tr style=""><td>M.Ats</td><td>3211</td></tr>
+						<tr style=""><td>I.Gav</td><td>513</td></tr>
+						</tbody>
+						</table>
 			
 				</div>
 				
@@ -196,7 +271,7 @@
 			
 			
 			
-		
+		<!--  
 			<div class="tab5 tabsContent">
 			
 				<div><h3>1. Kuidas hääletada</h3></div>
@@ -208,9 +283,9 @@
 				<div>Lõpuks kandideerige oma piirkonda</div>
 				
 				
-			</div>
+			</div>-->	
 		</div>
-	</div>
+	
 	
 			
 	<!-- Siia piirkonna dialog -->
