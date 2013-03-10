@@ -190,6 +190,7 @@ $(document).ready(function()
 			// kandidaadid script algus
 			
 			var options= {
+					
 					matchingRow: function(state, tr, textTokens) {
 						if(!state || !state.id) {
 							return true;
@@ -203,6 +204,7 @@ $(document).ready(function()
 						}
 					}
 			};
+			
 			$('#kandidaadidTabel').tableFilter(options);
 			
 			
