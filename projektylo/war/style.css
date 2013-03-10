@@ -57,193 +57,21 @@ ul.tabs
 {
 	text-align:left;
 }
+
 valimata
 {
 	color:red;
 }
 
-#logiButton
-{
-	background-color:lightyellow;
-}
-#valiPiirkond 
-{
-	background-color:lightyellow;
-	color:red;
-}
-
-#valiErakond
-{
-	background-color:lightyellow;
-	color:red;
-}
+#valiPiirkond,
+#valiErakond,
 #annaHaal
 {
 	background-color:lightyellow;
 	color:red;
 }
 
-.web_dialog_overlay
-{
-   position: fixed;
-   top: 0;
-   right: 0;
-   bottom: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   background: #000000;
-   opacity: .15;
-   filter: alpha(opacity=15);
-   -moz-opacity: .15;
-   z-index: 101;
-   display: none;
-}
-.web_dialog
-{
-   display: none;
-   position: fixed;
-   width: 380px;
-   height: 200px;
-   top: 50%;
-   left: 50%;
-   margin-left: -190px;
-   margin-top: -100px;
-   background-color: #ffffff;
-   border: 2px solid #FFA07A;
-   padding: 0px;
-   z-index: 102;
-   font-family: Verdana;
-   font-size: 10pt;
-}
-.web_dialog_title
-{
-   border-bottom: solid 2px #FFA07A;
-   background-color: #FFFFE0;
-   padding: 4px;
-   color: lightsalmon;
-   font-weight:bold;
-}
-.web_dialog_title a
-{
-   color: lightsalmon;
-   text-decoration: none;
-}
-.align_right
-{
-   text-align: right;
-}
-
-#tableStiil 
-{
-	width:100%;
-	border:0px;
-	cellpading:0;
-	cellspacing:0;
-}
-
-#tableStiil2
-{
-	width:100%;
-	border:0px;
-	cellpading:0;
-	cellspacing:0;
-}
-
-#piirkond
-{
-	font-weight:bold;
-}
-#test
-{
-	font-weight:bold;
-}
-
-#erakond
-{
-	font-weight:bold;
-}
-
-#erakondModal
-{
-	colspan:2;
-	padding-left: 15px;	
-}
-
-#piirkondModal {
-	 colspan:2; 
-	 padding-left: 15px;
-}
-.sideMenu
-{
-	width:20%;
-}
-
-.statPiirkondContent
-{
-	display:none;
-	margin-left:20%;	
-}
-
-.statErakondContent 
-{
-	display:none;
-	margin-left:20%;
-}
-
-.statKandidaadidContent
-{
-	display:none;
-	margin-left:20%;
-}
-
-.statRiiklikContent
-{
-	display:none;
-	margin-left:20%;
-}
-
-#statPiirkond,
-#kandideeriEnnast,
-#statErakond,
-#statKandidaadid,
-#statRiiklik,
-#kuvaKandidaadid
-{
-	background-color:lightyellow;
-}
-
-
-
-.filter
-{
-	width:95%;
-}
-
-.andmedContent
-{
-	display:none;
-}
-
-
-.logiSisse
-{
-	background-color:lightyellow;
-}
-
-.logiV2lja
-{
-	background-color:lightyellow;
-	display:none;
-}
-
-#kandideeri
-{
-	display:none;
-}
-
+.web_dialog_overlay,
 .web_dialog_overlay2
 {
    position: fixed;
@@ -262,6 +90,8 @@ valimata
    z-index: 101;
    display: none;
 }
+
+.web_dialog,
 .web_dialog2
 {
    display: none;
@@ -279,6 +109,8 @@ valimata
    font-family: Verdana;
    font-size: 10pt;
 }
+
+.web_dialog_title,
 .web_dialog_title2
 {
    border-bottom: solid 2px #FFA07A;
@@ -287,8 +119,81 @@ valimata
    color: lightsalmon;
    font-weight:bold;
 }
+
+.web_dialog_title a,
 .web_dialog_title2 a
 {
    color: lightsalmon;
    text-decoration: none;
+}
+
+.align_right
+{
+   text-align: right;
+}
+
+#tableStiil,
+#tableStiil2
+{
+	width:100%;
+	border:0px;
+	cellpading:0;
+	cellspacing:0;
+}
+
+#piirkond,
+#test,
+#erakond
+{
+	font-weight:bold;
+}
+
+#erakondModal,
+#piirkondModal
+{
+	colspan:2;
+	padding-left: 15px;	
+}
+
+.sideMenu
+{
+	width:20%;
+}
+
+.statPiirkondContent,
+.statErakondContent,
+.statKandidaadidContent,
+.statRiiklikContent
+{
+	display:none;
+	margin-left:20%;	
+}
+
+#statPiirkond,
+#kandideeriEnnast,
+#statErakond,
+#statKandidaadid,
+#statRiiklik,
+#kuvaKandidaadid,
+#logiButton,
+.logiSisse
+{
+	background-color:lightyellow;
+}
+
+.filter
+{
+	width:95%;
+}
+
+.andmedContent,
+#kandideeri
+{
+	display:none;
+}
+
+.logiV2lja
+{
+	background-color:lightyellow;
+	display:none;
 }
