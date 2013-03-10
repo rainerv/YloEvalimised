@@ -84,10 +84,12 @@
 					<b>Nimi: </b>Ülo Üloste<br>
 					<div id="piirkond"><b>Piirkond: </b><valimata>Piirkond valimata!</valimata><input type="button" id="valiPiirkond" value="Vali piirkond"/></div>
 					<b>Hääl: </b><input type="button" id="annaHaal" value="Anna hääl"/> <br>
-					<div id="test"><b>Kandidatuur: </b><valimata>Piirkond valimata!</valimata></div>
+					<div id="test"><b>Kandidatuur: </b><valimata>Puudub!</valimata><input type="button" id="kandideeriEnnast" value="Kandideeri"/></div>
+					<div id="erakond"><b>Erakond: </b><valimata>Puudub!</valimata><input type="button" id="valiErakond" value="Vali erakond" /></div>
 					<b>E-post: </b>ülo@ülo.com  <a href="http://www.google.com">Muuda!	</a><br>
 					<b>Telefon: </b>999-954-1956  <a href="http://www.google.com">Muuda!</a>
 				</div>
+				
 				
 				
 				<div class="logiAndmed">
@@ -285,6 +287,7 @@ document.write(hours,":",minutes);
          <td id="piirkondModal">
             <div id="ringkond">
                <select>
+                <option value="Vali">Vali</option>
                	<option value="Ringkond1">Haabersti,Kristiine,Põhja-Tallinn</option>
   				<option value="Ringkond2">Kesklinn,Lasnamäe,Pirita</option>
  				<option value="Ringkond3">Mustamäe,Nõmme</option>
@@ -314,6 +317,61 @@ document.write(hours,":",minutes);
 	</div>
 	
 	<!-- Siin lõppeb piirkonna dialog -->
+	
+	<!-- Siia erakonna dialog -->
+	
+	<!-- Siia piirkonna dialog -->
+	<div id="overlay2" class="web_dialog_overlay2"></div>
+	<div id="dialog2" class="web_dialog2">
+		<table id="tableStiil2">
+			<tr>
+				<td class="web_dialog_title2">Vali erakond</td>
+				<td class="web_dialog_title2 align_right">
+					<a href="#" id="sulgeErakondButton">Sulge</a>
+				</td>
+			</tr>
+		<tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td id="erakondModal">
+            <b>Valige enda erakond </b>
+         </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td id="erakondModal">
+            <div id="erakonnad">
+               <select>
+                <option value="Vali">Vali</option>
+               	<option value="Erakond1">Keskerakond</option>
+  				<option value="Erakond2">Reformierakond</option>
+ 				<option value="Erakond3">IRL</option>
+
+ 				
+               </select>
+            </div>
+         </td>
+      </tr>
+      <tr>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+      </tr>
+      <tr>
+         <td id="erakondModal">
+            <input id="valiErakondButton" type="button" value="Vali" />
+         </td>
+      </tr>
+   </table>
+	</div>
+	
+	<!-- Siin lõppeb piirkonna dialog -->
+	
+	<!-- Erakonna dialog lõpp -->
 	
 	<!-- Kandidaadi otsingu dialog -->
 	

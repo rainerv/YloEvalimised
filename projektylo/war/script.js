@@ -111,7 +111,7 @@ $(document).ready(function()
 		      {
 		         var ringkond = $("#ringkond option:selected").text();
 		         $("#piirkond").html("Piirkond: "+ringkond);
-		         $("#test").html("Kandidatuur: Puudub!")
+		         //$("#test").html("Kandidatuur: Puudub!"+ kandideerimine);
 		         HideDialog();
 		         e.preventDefault();
 		         $("#valiPiirkond").hide();
@@ -235,5 +235,65 @@ $(document).ready(function()
         chart.draw(data, options);
       }
       
+      $("#kandideeriEnnast").click(function()
+      {
+    	  var ringkond = $("#ringkond option:selected").text();
+    	  var erakond = $("#erakonnad option:selected").text();
+    	  if(ringkond=="Vali" || erakond=="Vali"){alert("Piirkond ja erakond peavad olema valitud");}
+    	  else{
+    		  alert("Kandideerimiseks vajalikud toimingud tehtud");
+    	  }
+      });
+      
+   // erakonna funktsioon
+
+      $("#valiErakond").click(function (e)
+      {
+         ShowDialog2(true);
+         e.preventDefault();
+      });
+
+      $("#sulgeErakondButton").click(function (e)
+      {
+         HideDialog2();
+         e.preventDefault();
+      });
+
+      $("#valiErakondButton").click(function (e)
+      {
+         var erakond = $("#erakonnad option:selected").text();
+         $("#erakond").html("Erakond: "+erakond);
+         //$("#test").html("Kandidatuur: Puudub!"+ kandideerimine);
+         HideDialog2();
+         e.preventDefault();
+         $("#valiErakond").hide();
+      });
+
+   function ShowDialog2(modal2)
+   {
+      $("#overlay2").show();
+      $("#dialog2").fadeIn(300);
+
+      if (modal2)
+      {
+         $("#overlay2").unbind("click");
+      }
+      else
+      {
+         $("#overlay2").click(function (e)
+         {
+            HideDialog2();
+         });
+      }
+   }
+
+   function HideDialog2()
+   {
+      $("#overlay2").hide();
+      $("#dialog2").fadeOut(300);
+   } 
+
+
+//erakonna funktsioon lõpp
 			 
 });
