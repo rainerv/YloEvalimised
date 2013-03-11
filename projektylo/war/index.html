@@ -38,13 +38,11 @@
         
       }
     </script>
-    
-	
-   
-	
 </head>
 <body>
+	<!-- Main class algus -->
 	<div class="main">
+		<!-- Alltabs class algus -->
 		<div class="alltabs">
 			<ul class="tabs">
 				<li class="tab1">
@@ -73,6 +71,7 @@
 					</a>
 				</li>
 			</ul>
+			<!-- Esilehe tab content algus -->
 			<div class="tab1 tabsContent">
 				<h2>Tere tulemast!</h2>
 				Olete leidnud tee uue E-Valimiste veebirakenduseni.<br>
@@ -80,7 +79,9 @@
 				Lisaks saate sisse logides ennast kandidaadiks lisada ja teistele hääli anda.<br>
 				Kuidas seda kõike teha lugege abi lehelt.
 			</div>
-<!-- esilehe lõpp, andmete lehe algus -->			
+			<!-- Esilehe tab content lõpp -->
+			
+			<!-- Andmed tab content algus -->
 			<div class="tab2 tabsContent">
 				<div class="andmedContent">
 					<b>Nimi: </b>Ülo Üloste<br>
@@ -91,9 +92,7 @@
 					<b>E-post: </b>ülo@ülo.com  <a href="http://www.google.com">Muuda!	</a><br>
 					<b>Telefon: </b>999-954-1956  <a href="http://www.google.com">Muuda!</a>
 				</div>
-				
-				
-				
+				<!-- Sisse logimise div algus -->
 				<div class="logiAndmed">
 					<form name="logiForm">
 						<p>Kasutajanimi: <input type="text" name="username"></p>
@@ -102,11 +101,12 @@
 						Logimiseks kasutajanimi: Kasutaja ja parool: Parool
 					</form>
 				</div>
+				<!-- Sisse logimise div lõpp -->
 				<input type="button" value="Logi välja" class="logiV2lja">
-				
-				
 			</div>
-<!-- andmete lehe lõpp, kandidaatide algus -->			
+			<!-- Andmed tab content lõpp -->
+			
+			<!-- Kandidaadid tab content algus -->
 			<div class="tab3 tabsContent">
 				<div class="content">
 					<h3>Kandidaadid</h3>
@@ -153,102 +153,94 @@
 						<tr style=""><td>I.Gav</td><td>18</td><td>Reformierakond</td><td>Piirkond1</td><td>513</td><td><input type="button" value="Anna hääl"></td></tr>
 						</tbody>
      					</table>
-					
-					
 				</div>
 			</div>
+			<!-- Kandidaadid tab content lõpp -->	
 			
-<!-- kandidaadid lõpp, statistika algus -->			
+			<!-- Statistika tab content algus -->	
 			<div class="tab4 tabsContent">
-			<div><h3>Statistika</h3></div>
-					
+				<div><h3>Statistika</h3></div>
+				<!-- Statistika sidemenu algus -->
 				<div class="sideMenu">
 					<input type="button" id="statPiirkond" value="Piirkondlik"/><br>
 					<input type="button" id="statErakond" value="Erakondlik"/><br>
 					<input type="button" id="statKandidaadid" value="Kandidaadid"/><br>
 					<input type="button" id="statRiiklik" value="Üleriiklik"/><br>
 				</div>
-<script language="javascript"> 
- 
-today = new Date(); 
-hours=today.getHours();
-minutes=today.getMinutes();
-if(minutes<10) {
-	minutes="0"+today.getMinutes();
-}
-else {
-	minutes=today.getMinutes();
-}
-
-document.write("Jooksev üleriiklik statistika seisuga ");
-document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
-document.write(hours,":",minutes); 
-
-
-</script> 
+				<!-- Statistika sidemenu lõpp -->
+				
+				<!-- Skript reaalaja arvutamiseks algus -->
+				<script language="javascript"> 
+ 					today = new Date(); 
+					hours=today.getHours();
+					minutes=today.getMinutes();
+					if(minutes<10) {minutes="0"+today.getMinutes();}
+					else {minutes=today.getMinutes();}
+					document.write("Jooksev üleriiklik statistika seisuga ");
+					document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getYear()-100+" ");
+					document.write(hours,":",minutes); 
+				</script>
+				<!-- Skript reaalaja arvutamiseks lõpp -->
+				
+				<!-- Statistika piirkonna content algus -->
 				<div class="statPiirkondContent">
-				
-				<div id="chart_piir" style="width: 1000px; height: 600px;"></div>
-				<a id="printButton" onclick="window.print()">Prindi</a>	
-	
+					<div id="chart_piir" style="width: 1000px; height: 600px;"></div>
+					<a id="printButton" onclick="window.print()">Prindi</a>	
 				</div>
+				<!-- Statistika piirkonna content lõpp -->
 				
-				
-				
-				
-				
+				<!-- Statistika erakonna content algus -->
 				<div class="statErakondContent">
-				<div id="chart_div" style="width: 500px; height: 400px;"></div>
-				<a id="printButton" onclick="window.print()">Prindi</a>
+					<div id="chart_div" style="width: 500px; height: 400px;"></div>
+					<a id="printButton" onclick="window.print()">Prindi</a>
 				</div>
+				<!-- Statistika erakonna content lõpp -->
 				
+				<!-- Statistika kandidaadid content algus -->
 				<div class="statKandidaadidContent">
-				<div id="kandidaatTabel">
-					<table class="sortable">
-					
-					<thead>	
-						<tr><th>Nimi</th><th>Hääli</th><th>Erakond</th><th>Piirkond</th></tr>
-					
-				
-				
-				<tbody>
-						<tr style=""><td>E.Savi</td><td>5152</td><td>Keskerakond</td><td>Tartu linn</td></tr>
-						<tr style=""><td>M.Ees</td><td>52</td><td>IRL</td><td>Pärnu</td></tr>
-						<tr style=""><td>N.Naine</td><td>5432</td><td>Reformierakond</td><td>Mustamäe,Nõmme</td></tr>
-						<tr style=""><td>A.Doos</td><td>1231</td><td>Keskerakond</td><td>Ida-Viru</td></tr>
-						<tr style=""><td>N.Eeger</td><td>4343</td><td>IRL</td><td>Ida-Viru</td></tr>
-						<tr style=""><td>A.Nsip</td><td>2131</td><td>IRL</td><td>Tartu linn</td></tr>
-						<tr style=""><td>P.Ihlakas</td><td>322</td><td>Keskerakond</td><td>Mustamäe,Nõmme</td></tr>
-						<tr style=""><td>A.Hmed</td><td>5997</td><td>Reformierakond</td><td>Ida-Viru</td></tr>
-						<tr style=""><td>V.Allo</td><td>5453</td><td>Reformierakond</td><td>Tartu linn</td></tr>
-						<tr style=""><td>E.Lo</td><td>8833</td><td>Keskerakond</td><td>Harju-Rapla</td></tr>
-						<tr style=""><td>E.Ldur</td><td>6574</td><td>IRL</td><td>Tartu linn</td></tr>
-						<tr style=""><td>P.Ildur</td><td>3932</td><td>Keskerakond</td><td>Harju-Rapla</td></tr>
-						<tr style=""><td>K.Irves</td><td>1231</td><td>IRL</td><td>Tartu linn</td></tr>
-						<tr style=""><td>M.Etsik</td><td>4004</td><td>Reformierakond</td><td>Tartu linn</td></tr>
-						<tr style=""><td>L.Ambikas</td><td>2332</td><td>Keskerakond</td><td>Lääne-Viru</td></tr>
-						<tr style=""><td>L.ooder</td><td>1020</td><td>IRL</td><td>Tartu linn</td></tr>
-						<tr style=""><td>M.Ats</td><td>3211</td><td>Reformierakond</td><td>Tartu linn</td></tr>
-						<tr style=""><td>I.Gav</td><td>513</td><td>Keskerakond</td><td>Lääne-Viru</td></tr>
-						</tbody>
+					<div id="kandidaatTabel">
+						<table class="sortable">
+							<thead>	
+								<tr><th>Nimi</th><th>Hääli</th><th>Erakond</th><th>Piirkond</th></tr>
+							</thead>
+							<tbody>
+								<tr style=""><td>E.Savi</td><td>5152</td><td>Keskerakond</td><td>Tartu linn</td></tr>
+								<tr style=""><td>M.Ees</td><td>52</td><td>IRL</td><td>Pärnu</td></tr>
+								<tr style=""><td>N.Naine</td><td>5432</td><td>Reformierakond</td><td>Mustamäe,Nõmme</td></tr>
+								<tr style=""><td>A.Doos</td><td>1231</td><td>Keskerakond</td><td>Ida-Viru</td></tr>
+								<tr style=""><td>N.Eeger</td><td>4343</td><td>IRL</td><td>Ida-Viru</td></tr>
+								<tr style=""><td>A.Nsip</td><td>2131</td><td>IRL</td><td>Tartu linn</td></tr>
+								<tr style=""><td>P.Ihlakas</td><td>322</td><td>Keskerakond</td><td>Mustamäe,Nõmme</td></tr>
+								<tr style=""><td>A.Hmed</td><td>5997</td><td>Reformierakond</td><td>Ida-Viru</td></tr>
+								<tr style=""><td>V.Allo</td><td>5453</td><td>Reformierakond</td><td>Tartu linn</td></tr>
+								<tr style=""><td>E.Lo</td><td>8833</td><td>Keskerakond</td><td>Harju-Rapla</td></tr>
+								<tr style=""><td>E.Ldur</td><td>6574</td><td>IRL</td><td>Tartu linn</td></tr>
+								<tr style=""><td>P.Ildur</td><td>3932</td><td>Keskerakond</td><td>Harju-Rapla</td></tr>
+								<tr style=""><td>K.Irves</td><td>1231</td><td>IRL</td><td>Tartu linn</td></tr>
+								<tr style=""><td>M.Etsik</td><td>4004</td><td>Reformierakond</td><td>Tartu linn</td></tr>
+								<tr style=""><td>L.Ambikas</td><td>2332</td><td>Keskerakond</td><td>Lääne-Viru</td></tr>
+								<tr style=""><td>L.ooder</td><td>1020</td><td>IRL</td><td>Tartu linn</td></tr>
+								<tr style=""><td>M.Ats</td><td>3211</td><td>Reformierakond</td><td>Tartu linn</td></tr>
+								<tr style=""><td>I.Gav</td><td>513</td><td>Keskerakond</td><td>Lääne-Viru</td></tr>
+							</tbody>
 						</table>
-			
+					</div>
+					<a id="printButton" onclick="window.print()">Prindi</a>
 				</div>
-				<a id="printButton" onclick="window.print()">Prindi</a>
-				</div>
-				<div class="statRiiklikContent">
+				<!-- Statistika kandidaadid content lõpp -->
 				
+				<!-- Statistika riiklik content algus -->
+				<div class="statRiiklikContent">
 					<h2>Üleriiklik</h2>
 					<img src="kaart.jpg"/>
 					<a id="printButton" onclick="window.print()">Prindi</a>
-					
 				</div>
+				<!-- Statistika riiklik content lõpp -->
 			</div>
+			<!-- Statistika tab content lõpp -->
 			
-			
-<!--statistika lõpp, abi lehe algus  -->
+			<!-- Abi tab content algus -->
 			<div class="tab5 tabsContent">
-			
 				<div><h3>1. Kuidas hääletada</h3></div>
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige kandidaatide alt sobiv</div>
@@ -256,14 +248,14 @@ document.write(hours,":",minutes);
 				<div>Kõigepealt peate olema sisse loginud</div>
 				<div>Seejärel valige piirkond ja erakond</div>
 				<div>Lõpuks kandideerige oma piirkonda, oma valitud erakonnaga</div>
-				
-				
 			</div>	
+			<!-- Abi tab content lõpp -->
 		</div>
-	
-	
-			
-	<!-- Siia piirkonna dialog -->
+		<!-- Alltabs class lõpp -->
+	</div>
+	<!-- Main class lõpp -->
+
+	<!-- Piirkonna valimise modal dialog algus -->
 	<div id="overlay" class="web_dialog_overlay"></div>
 	<div id="dialog" class="web_dialog">
 		<table id="tableStiil">
@@ -273,62 +265,54 @@ document.write(hours,":",minutes);
 					<a href="#" id="sulgeButton">Sulge</a>
 				</td>
 			</tr>
-		<tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="piirkondModal">
-            <b>Valige enda piirkond </b>
-         </td>
-      </tr>
-      <tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="piirkondModal">
-            <div id="ringkond">
-               <select>
-                <option value="Vali">Vali</option>
-               	<option value="Ringkond1">Haabersti,Kristiine,Põhja-Tallinn</option>
-  				<option value="Ringkond2">Kesklinn,Lasnamäe,Pirita</option>
- 				<option value="Ringkond3">Mustamäe,Nõmme</option>
-				<option value="Ringkond4">Harju,Rapla</option>
- 				<option value="Ringkond5">Hiiu,Lääne,Saare</option>
- 				<option value="Ringkond6">Lääne-Viru</option>
- 				<option value="Ringkond7">Ida-Viru</option>
-				<option value="Ringkond8">Järva,Viljandi</option>
-				<option value="Ringkond9">Jõgeva,Tartu</option>
- 				<option value="Ringkond10">Tartu linn</option>
- 			 	<option value="Ringkond11">Võru,Valga,Põlva</option>
- 				<option value="Ringkond12">Pärnu</option>
-               </select>
-            </div>
-         </td>
-      </tr>
-      <tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="piirkondModal">
-            <input id="valiButton" type="button" value="Vali" />
-         </td>
-      </tr>
-   </table>
+			<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+      		</tr>
+      		<tr>
+        		<td id="piirkondModal">
+            		<b>Valige enda piirkond </b>
+         		</td>
+      		</tr>
+     		<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+      		</tr>
+      		<tr>
+        		<td id="piirkondModal">
+            		<div id="ringkond">
+                		<select>
+                			<option value="Vali">Vali</option>
+               				<option value="Ringkond1">Haabersti,Kristiine,Põhja-Tallinn</option>
+  							<option value="Ringkond2">Kesklinn,Lasnamäe,Pirita</option>
+ 							<option value="Ringkond3">Mustamäe,Nõmme</option>
+							<option value="Ringkond4">Harju,Rapla</option>
+ 							<option value="Ringkond5">Hiiu,Lääne,Saare</option>
+ 							<option value="Ringkond6">Lääne-Viru</option>
+ 							<option value="Ringkond7">Ida-Viru</option>
+							<option value="Ringkond8">Järva,Viljandi</option>
+							<option value="Ringkond9">Jõgeva,Tartu</option>
+ 							<option value="Ringkond10">Tartu linn</option>
+ 			 				<option value="Ringkond11">Võru,Valga,Põlva</option>
+ 							<option value="Ringkond12">Pärnu</option>
+               			</select>
+            		</div>
+         		</td>
+      		</tr>
+      		<tr>
+        		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+      		</tr>
+      		<tr>
+        		<td id="piirkondModal">
+            		<input id="valiButton" type="button" value="Vali" />
+         		</td>
+      		</tr>
+		</table>
 	</div>
-	
-	<!-- Siin lõppeb piirkonna dialog -->
-	
-	
-	
-	
-	
-	
-	<!-- Siia erakonna dialog -->
-	
-	<!-- Siia piirkonna dialog -->
+	<!-- Piirkonna valimise modal dialog lõpp -->
+
+	<!-- Erakonna valimise modal dialog algus -->
 	<div id="overlay2" class="web_dialog_overlay2"></div>
 	<div id="dialog2" class="web_dialog2">
 		<table id="tableStiil2">
@@ -338,55 +322,42 @@ document.write(hours,":",minutes);
 					<a href="#" id="sulgeErakondButton">Sulge</a>
 				</td>
 			</tr>
-		<tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="erakondModal">
-            <b>Valige enda erakond </b>
-         </td>
-      </tr>
-      <tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="erakondModal">
-            <div id="erakonnad">
-               <select>
-                <option value="Vali">Vali</option>
-               	<option value="Erakond1">Keskerakond</option>
-  				<option value="Erakond2">Reformierakond</option>
- 				<option value="Erakond3">IRL</option>
-
- 				
-               </select>
-            </div>
-         </td>
-      </tr>
-      <tr>
-         <td>&nbsp;</td>
-         <td>&nbsp;</td>
-      </tr>
-      <tr>
-         <td id="erakondModal">
-            <input id="valiErakondButton" type="button" value="Vali" />
-         </td>
-      </tr>
-   </table>
-	</div>
-	
-	<!-- Siin lõppeb piirkonna dialog -->
-	
-	<!-- Erakonna dialog lõpp -->
-	
-	<!-- Kandidaadi otsingu dialog -->
-	
-	
-	
-	<!-- Kandidaadi otsingu dialog lõpp -->
-	
-	
+			<tr>
+         		<td>&nbsp;</td>
+        		<td>&nbsp;</td>
+      		</tr>
+     		<tr>
+         		<td id="erakondModal">
+            		<b>Valige enda erakond </b>
+         		</td>
+      		</tr>
+      		<tr>
+         		<td>&nbsp;</td>
+         		<td>&nbsp;</td>
+      		</tr>
+      		<tr>
+         		<td id="erakondModal">
+           			<div id="erakonnad">
+               			<select>
+                			<option value="Vali">Vali</option>
+               				<option value="Erakond1">Keskerakond</option>
+  							<option value="Erakond2">Reformierakond</option>
+ 							<option value="Erakond3">IRL</option>
+               			</select>
+            		</div>
+         		</td>
+      		</tr>
+      		<tr>
+         		<td>&nbsp;</td>
+         		<td>&nbsp;</td>
+      		</tr>
+      		<tr>
+         		<td id="erakondModal">
+           	 		<input id="valiErakondButton" type="button" value="Vali" />
+         		</td>
+      		</tr>
+   		</table>
+   	</div>
+	<!-- Erakonna valimise modal dialog lõpp -->	
 </body>
 </html>
