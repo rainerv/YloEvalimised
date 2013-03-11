@@ -14,7 +14,6 @@
 	<script src="sorttable.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 	<script type="text/javascript">
-	
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
        
@@ -26,17 +25,13 @@
           ['Reformierakond', 18327]
           
         ]);
-
         var options = {
           title: 'Häälte jagunemine erakondlikult', 
           backgroundColor:'transparent'
         };
-
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-        
-        
-      }
+      	}
     </script>
 </head>
 <body>
