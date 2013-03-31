@@ -10,18 +10,26 @@ CREATE TABLE kandidaadid (
 
 
 INSERT INTO kandidaadid ("ID", "Piirkond", "Partei", "H‰‰li", "Eesnimi", "Perenimi") VALUES
-(),
+(534353, 'Tartu', 'Reformierakond', 44, 'Tınu', 'Tıukeratas'),
+(685675, 'Tallinn', 'Keskerakond', 45764, 'Meelis', 'Meeletu'),
+(356456, 'L‰‰ne-Virumaa', 'IRL', 562, 'Toivo', 'Toores'),
+(567554, 'P‰rnu', 'Sotsiaaldemokraadid', 2456, 'Mats', 'Maasikas');
 
 
 CREATE TABLE partei (
   "ID" int(7) NOT NULL AUTO_INCREMENT,
   "Nimi" varchar(31) NOT NULL,
+  "Liikmete_arv" int(11) NOT NULL,
   PRIMARY KEY ("ID"),
 );
 
 
-INSERT INTO parteid ("ID", "Nimi") VALUES
-();
+INSERT INTO parteid ("ID", "Nimi", "Liikmete_arv") VALUES
+(353, "Reformierakond", 65432),
+(354, "Keskerakond", 46664),
+(355, "Sotsiaaldemokraadid", 44333),
+(356, "IRL", 21345)
+;
 
 
 CREATE TABLE piirkonnad (
@@ -32,4 +40,10 @@ CREATE TABLE piirkonnad (
 
 
 INSERT INTO piirkonnad ("ID", "Nimi") VALUES
-();
+(12, "Tallinn"),
+(13, "Tartu"),
+(14, "P‰rnu"),
+(15, "Narva"),
+(16, "L‰‰ne-Virumaa"),
+(17, "Pılva")
+);
