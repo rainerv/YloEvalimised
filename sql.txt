@@ -8,12 +8,32 @@ CREATE TABLE kandidaat (
   PRIMARY KEY (ID)
 );
 
-
 INSERT INTO kandidaat (ID, Piirkond, Partei, H‰‰li, Eesnimi, Perenimi) VALUES
 (534353, 'Tartu', 'Reformierakond', 44, 'Tınu', 'Tıukeratas'),
-(685675, 'Tallinn', 'Keskerakond', 45764, 'Meelis', 'Meeletu'),
 (356456, 'L‰‰ne-Virumaa', 'IRL', 562, 'Toivo', 'Toores'),
-(567554, 'P‰rnu', 'Sotsiaaldemokraadid', 2456, 'Mats', 'Maasikas');
+(624562, 'Tallinn1', 'Reformierakond', 345, 'Eedu', 'Savi'),
+(356735, 'Tallinn2', 'Keskerakond', 7477, 'Mart', 'Ees'),
+(226527, 'Tallinn3', 'Sotsiaaldemokraadid', 36576, 'Natalja', 'Naine'),
+(356736, 'Harju-, Raplamaa', 'IRL', 3456, 'Albert', 'Doos'),
+(367388, 'L‰‰ne-, Hiiu-, Saaremaa', 'Rohelised', 334, 'Anu', 'Nsip'),
+(676356, 'Ida-Virumaa', 'Keskerakond', 4654, 'Anton', 'Ahmed'),
+(676387, 'J‰rva-, Viljandimaa', 'Sotsiaaldemokraadid', 4884, 'Vello', 'Allo'),
+(367886, 'Jıgeva-, Tartumaa', 'Keskerakond', 567, 'Elmar', 'Eldur'),
+(367355, 'Pılva-, Valga-, Vırumaa', 'Reformierakond', 34, 'Kaarel', 'Irves'),
+(367351, 'P‰rnumaa', 'Reformierakond', 4577, 'Leelo', 'Ambikas');
+
+select * from kandidaat order by ID asc
+select * from kandidaat order by ID desc
+select * from kandidaat order by Piirkond asc
+select * from kandidaat order by Piirkond desc
+select * from kandidaat order by Partei asc
+select * from kandidaat order by Partei desc
+select * from kandidaat order by H‰‰li asc
+select * from kandidaat order by H‰‰li desc
+select * from kandidaat order by Eesnimi asc
+select * from kandidaat order by Eesnimi desc
+select * from kandidaat order by Perenimi asc
+select * from kandidaat order by Perenimi desc
 
 
 CREATE TABLE partei (
@@ -23,14 +43,20 @@ CREATE TABLE partei (
   PRIMARY KEY (ID)
 );
 
-
 INSERT INTO partei (ID, Nimi, Liikmete_arv) VALUES
 (353, 'Reformierakond', 65432),
 (354, 'Keskerakond', 46664),
 (355, 'Sotsiaaldemokraadid', 44333),
-(356, 'IRL', 21345)
+(356, 'IRL', 21345),
+(357, 'Rohelised', 3456)
 ;
 
+select * from partei order by ID asc
+select * from partei order by ID desc
+select * from partei order by Nimi asc
+select * from partei order by Nimi desc
+select * from partei order by Liikmete_arv asc
+select * from partei order by Liikmete_arv desc
 
 CREATE TABLE piirkond (
   ID int(11) NOT NULL AUTO_INCREMENT,
@@ -39,9 +65,20 @@ CREATE TABLE piirkond (
 );
 
 INSERT INTO piirkond (ID, Nimi) VALUES
-(12, 'Tallinn'),
-(13, 'Tartu'),
-(14, 'P‰rnu'),
-(15, 'Narva'),
-(16, 'L‰‰ne-Virumaa'),
-(17, 'Pılva');
+(1, 'Tallinn1'),
+(2, 'Tallinn2'),
+(3, 'Tallinn3'),
+(4, 'Harju-, Raplamaa'),
+(5, 'L‰‰ne-, Hiiu-, Saaremaa'),
+(6, 'L‰‰ne-Virumaa');
+(7, 'Ida-Virumaa'),
+(8, 'J‰rva-, Viljandimaa'),
+(9, 'Jıgeva-, Tartumaa'),
+(10, 'Tartu'),
+(11, 'Pılva-, Valga-, Vırumaa'),
+(12, 'P‰rnumaa');
+
+select * from piirkond order by ID asc
+select * from piirkond order by ID desc
+select * from piirkond order by Nimi asc
+select * from piirkond order by Nimi desc
