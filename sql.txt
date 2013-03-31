@@ -1,15 +1,15 @@
-CREATE TABLE kandidaadid (
-  "ID" int(7) NOT NULL AUTO_INCREMENT,
-  "Piirkond" varchar(31) NOT NULL,
-  "Partei" varchar(31) NOT NULL,
-  "H‰‰li" int(7) NOT NULL DEFAULT "0",
-  "Eesnimi" varchar(31) NOT NULL,
-  "Perenimi" varchar(31) NOT NULL,
-  PRIMARY KEY ("ID")
+CREATE TABLE kandidaat (
+  ID int(7) NOT NULL AUTO_INCREMENT,
+  Piirkond varchar(31) NOT NULL,
+  Partei varchar(31) NOT NULL,
+  H‰‰li int(7) NOT NULL DEFAULT "0",
+  Eesnimi varchar(31) NOT NULL,
+  Perenimi varchar(31) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 
-INSERT INTO kandidaadid ("ID", "Piirkond", "Partei", "H‰‰li", "Eesnimi", "Perenimi") VALUES
+INSERT INTO kandidaat (ID, Piirkond, Partei, H‰‰li, Eesnimi, Perenimi) VALUES
 (534353, 'Tartu', 'Reformierakond', 44, 'Tınu', 'Tıukeratas'),
 (685675, 'Tallinn', 'Keskerakond', 45764, 'Meelis', 'Meeletu'),
 (356456, 'L‰‰ne-Virumaa', 'IRL', 562, 'Toivo', 'Toores'),
@@ -17,33 +17,31 @@ INSERT INTO kandidaadid ("ID", "Piirkond", "Partei", "H‰‰li", "Eesnimi", "Pereni
 
 
 CREATE TABLE partei (
-  "ID" int(7) NOT NULL AUTO_INCREMENT,
-  "Nimi" varchar(31) NOT NULL,
-  "Liikmete_arv" int(11) NOT NULL,
-  PRIMARY KEY ("ID"),
+  ID int(7) NOT NULL AUTO_INCREMENT,
+  Nimi varchar(31) NOT NULL,
+  Liikmete_arv int(11) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
 
-INSERT INTO parteid ("ID", "Nimi", "Liikmete_arv") VALUES
-(353, "Reformierakond", 65432),
-(354, "Keskerakond", 46664),
-(355, "Sotsiaaldemokraadid", 44333),
-(356, "IRL", 21345)
+INSERT INTO partei (ID, Nimi, Liikmete_arv) VALUES
+(353, 'Reformierakond', 65432),
+(354, 'Keskerakond', 46664),
+(355, 'Sotsiaaldemokraadid', 44333),
+(356, 'IRL', 21345)
 ;
 
 
-CREATE TABLE piirkonnad (
-  "ID" int(11) NOT NULL AUTO_INCREMENT,
-  "Nimi" varchar(31) NOT NULL,
-  PRIMARY KEY ("ID")
+CREATE TABLE piirkond (
+  ID int(11) NOT NULL AUTO_INCREMENT,
+  Nimi varchar(31) NOT NULL,
+  PRIMARY KEY (ID)
 );
 
-
-INSERT INTO piirkonnad ("ID", "Nimi") VALUES
-(12, "Tallinn"),
-(13, "Tartu"),
-(14, "P‰rnu"),
-(15, "Narva"),
-(16, "L‰‰ne-Virumaa"),
-(17, "Pılva")
-);
+INSERT INTO piirkond (ID, Nimi) VALUES
+(12, 'Tallinn'),
+(13, 'Tartu'),
+(14, 'P‰rnu'),
+(15, 'Narva'),
+(16, 'L‰‰ne-Virumaa'),
+(17, 'Pılva');
