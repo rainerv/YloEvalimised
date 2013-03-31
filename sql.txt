@@ -1,0 +1,35 @@
+CREATE TABLE kandidaadid (
+  "ID" int(7) NOT NULL AUTO_INCREMENT,
+  "Piirkond" varchar(31) NOT NULL,
+  "Partei" varchar(31) NOT NULL,
+  "H‰‰li" int(7) NOT NULL DEFAULT "0",
+  "Eesnimi" varchar(31) NOT NULL,
+  "Perenimi" varchar(31) NOT NULL,
+  PRIMARY KEY ("ID")
+);
+
+
+INSERT INTO kandidaadid ("ID", "Piirkond", "Partei", "H‰‰li", "Eesnimi", "Perenimi") VALUES
+(),
+
+
+CREATE TABLE partei (
+  "ID" int(7) NOT NULL AUTO_INCREMENT,
+  "Nimi" varchar(31) NOT NULL,
+  PRIMARY KEY ("ID"),
+);
+
+
+INSERT INTO parteid ("ID", "Nimi") VALUES
+();
+
+
+CREATE TABLE piirkonnad (
+  "ID" int(11) NOT NULL AUTO_INCREMENT,
+  "Nimi" varchar(31) NOT NULL,
+  PRIMARY KEY ("ID")
+);
+
+
+INSERT INTO piirkonnad ("ID", "Nimi") VALUES
+();
