@@ -231,3 +231,9 @@ valimata
 		display:none;
 	}
 }
+
+#hoiatused
+{
+	text-align:center;
+	color:red;
+}
