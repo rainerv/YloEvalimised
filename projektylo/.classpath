@@ -118,5 +118,6 @@
 			<attribute name="javadoc_location" value="file:/C:/Users/Harri/Desktop/eclipse/plugins/com.google.appengine.eclipse.sdkbundle_1.7.6/appengine-java-sdk-1.7.6/docs/javadoc/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER/App Engine/v2"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
