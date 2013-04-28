@@ -34,10 +34,10 @@ function initialize() {
 	    position: new google.maps.LatLng(58.551061,22.598877),
 	    map: map,
 	    title: 'Saaremaa',
-	    icon: "darkgreen_MarkerA.png"
+	    icon: "paleblue_MarkerU.png"
     });
     google.maps.event.addListener(marker_saare, 'click', function() {
-	 new google.maps.InfoWindow({content: "Saaremaa - juhib IRL, hääli 5433 ehk 34% valijaskonnast', 58.551061,22.598877"}).open(map, marker_saare);
+	 new google.maps.InfoWindow({content: "Juhib IRL, hääli 5433 ehk 34% valijaskonnast"}).open(map, marker_saare);
 		});
     ////////////////////////
     var marker_rapla =  new google.maps.Marker({
@@ -47,39 +47,139 @@ function initialize() {
 	    icon: "brown_MarkerA.png"
     });
     google.maps.event.addListener(marker_rapla, 'click', function() {
-	 new google.maps.InfoWindow({content: "Raplamaa - juhib SDE, hääli 3455 ehk 28% valijaskonnast"}).open(map, marker_rapla);
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 3455 ehk 28% valijaskonnast"}).open(map, marker_rapla);
 		});
     /////////////////////////
     var marker_tartu =  new google.maps.Marker({
 	    position: new google.maps.LatLng(58.406029,26.801491),
 	    map: map,
 	    title: 'Tartumaa',
-	    icon: "green_MarkerY.png"
+	    icon: "orange_MarkerL.png"
     });
     google.maps.event.addListener(marker_tartu, 'click', function() {
-	 new google.maps.InfoWindow({content: "juhib Reform, hääli 23456 ehk 39% valijaskonnast"}).open(map, marker_tartu);
+	 new google.maps.InfoWindow({content: "Juhib Reform, hääli 23456 ehk 39% valijaskonnast"}).open(map, marker_tartu);
 		});
     ////////////////////////
     var marker_harju =  new google.maps.Marker({
-	    position: new google.maps.LatLng(59.386381,25.235596),
+	    position: new google.maps.LatLng(59.428316,24.73938),
 	    map: map,
 	    title: 'Harjumaa',
-	    icon: "orange_MarkerL.png"
+	    icon: "darkgreen_MarkerA.png"
     });
     google.maps.event.addListener(marker_harju, 'click', function() {
-	 new google.maps.InfoWindow({content: "Harjumaa - juhib Keskerakond, hääli 7565 ehk 23% valijaskonnast"}).open(map, marker_harju);
+	 new google.maps.InfoWindow({content: "Juhib Keskerakond, hääli 7565 ehk 23% valijaskonnast"}).open(map, marker_harju);
 		});
     ////////////////////////////
     var marker_jarva =  new google.maps.Marker({
 	    position: new google.maps.LatLng(58.907483,25.504761),
 	    map: map,
 	    title: 'Järvamaa',
-	    icon: "pink_MarkerB.png"
+	    icon: "brown_MarkerA.png"
     });
     google.maps.event.addListener(marker_jarva, 'click', function() {
-	 new google.maps.InfoWindow({content: "Järvamaa - juhib SDE, hääli 2565 ehk 28% valijaskonnast"}).open(map, marker_jarva);
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 2565 ehk 28% valijaskonnast"}).open(map, marker_jarva);
 		});
-
+    ////////////////////////////
+    var marker_polva =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.134471,27.203522),
+	    map: map,
+	    title: 'Põlvamaa',
+	    icon: "orange_MarkerL.png"
+    });
+    google.maps.event.addListener(marker_polva, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib Reform, hääli 5214 ehk 42% valijaskonnast"}).open(map, marker_polva);
+		});
+    ////////////////////////
+        var marker_laaneviru =  new google.maps.Marker({
+	    position: new google.maps.LatLng(59.333189,26.331482),
+	    map: map,
+	    title: 'Lääne-Virumaa',
+	    icon: "brown_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_laaneviru, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 23345 ehk 30% valijaskonnast"}).open(map, marker_laaneviru);
+		});
+    ////////////////////////
+        var marker_laanemaa =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.924499,23.799133),
+	    map: map,
+	    title: 'Läänemaa',
+	    icon: "darkgreen_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_laanemaa, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib Keskerakond, hääli 7465 ehk 26% valijaskonnast"}).open(map, marker_laanemaa);
+		});
+    ////////////////////////
+        var marker_jogeva =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.711189,26.383667),
+	    map: map,
+	    title: 'Jõgevamaa',
+	    icon: "brown_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_jogeva, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 3673 ehk 33% valijaskonnast"}).open(map, marker_jogeva);
+		});
+    ////////////////////////
+        var marker_idaviru =  new google.maps.Marker({
+	    position: new google.maps.LatLng(59.284123,27.397156),
+	    map: map,
+	    title: 'Ida-Virumaa',
+	    icon: "darkgreen_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_idaviru, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib Keskerakond, hääli 7632 ehk 23% valijaskonnast"}).open(map, marker_idaviru);
+		});
+    ////////////////////////
+        var marker_hiiu =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.935839,22.589264),
+	    map: map,
+	    title: 'Hiiumaa',
+	    icon: "brown_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_hiiu, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 6245 ehk 45% valijaskonnast"}).open(map, marker_hiiu);
+		});
+    ////////////////////////
+        var marker_voru =  new google.maps.Marker({
+	    position: new google.maps.LatLng(57.82428,26.854706),
+	    map: map,
+	    title: 'Võrumaa',
+	    icon: "orange_MarkerL.png"
+    });
+    google.maps.event.addListener(marker_voru, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib Reform, hääli 2562 ehk 33% valijaskonnast"}).open(map, marker_voru);
+		});
+    ////////////////////////
+        var marker_valga =  new google.maps.Marker({
+	    position: new google.maps.LatLng(57.945472,26.166687),
+	    map: map,
+	    title: 'Valgamaa',
+	    icon: "darkgreen_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_valga, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib Keskerakond, hääli 2456 ehk 44% valijaskonnast"}).open(map, marker_valga);
+		});
+    ////////////////////////
+        var marker_parnu =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.476465,24.691772),
+	    map: map,
+	    title: 'Pärnumaa',
+	    icon: "paleblue_MarkerU.png"
+    });
+    google.maps.event.addListener(marker_parnu, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib IRL, hääli 7644 ehk 26% valijaskonnast"}).open(map, marker_parnu);
+		});
+    ////////////////////////
+        var marker_viljandi =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.318145,25.565186),
+	    map: map,
+	    title: 'Viljandimaa',
+	    icon: "brown_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_viljandi, 'click', function() {
+	 new google.maps.InfoWindow({content: "Juhib SDE, hääli 3456 ehk 34% valijaskonnast"}).open(map, marker_viljandi);
+		});
+    ////////////////////////
 }
 	google.maps.event.addDomListener(window, 'load', initialize);
   
