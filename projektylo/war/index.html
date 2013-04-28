@@ -188,7 +188,7 @@
 				<!-- Statistika piirkonna content algus -->
 				<div class="statPiirkondContent">
 				
-				<div id="map" style="width: 500px; height: 400px;"></div>
+				<div id="map" style="width: 480px; height: 400px;">
 
   <script type="text/javascript">
     var locations = [
@@ -210,7 +210,7 @@
     ];
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 8,
+      zoom: 7,
       center: new google.maps.LatLng(58.665513,25.519409),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -233,12 +233,9 @@
       })(marker, i));
     }
   </script>
-				<!--  <div id="googleMap" style="width:500px;height:380px;"></div>-->
-				
-				
-					<!--  <div id="chart_piir" style="width: 1000px; height: 600px;"></div>
-					<a id="printButton" onclick="window.print()">Prindi</a>	
-				-->
+  </div>
+
+					<a id="printButton" onclick="window.print()">Prindi</a>
 				</div> 
 				
 				<!-- Statistika piirkonna content lõpp -->
