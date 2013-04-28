@@ -18,7 +18,73 @@
  <script src="http://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
 <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+    <script type="text/javascript">
   
+	
+function initialize() {
+    var map = new google.maps.Map(document.getElementById('piirkondlik'), {
+      zoom: 7,
+      center: new google.maps.LatLng(58.665513,25.519409),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+ var infowindow = new google.maps.InfoWindow();
+    
+    var marker_saare =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.551061,22.598877),
+	    map: map,
+	    title: 'Saaremaa',
+	    icon: "darkgreen_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_saare, 'click', function() {
+	 new google.maps.InfoWindow({content: "Saaremaa - juhib IRL, hääli 5433 ehk 34% valijaskonnast', 58.551061,22.598877"}).open(map, marker_saare);
+		});
+    ////////////////////////
+    var marker_rapla =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.8862,24.741211),
+	    map: map,
+	    title: 'Raplamaa',
+	    icon: "brown_MarkerA.png"
+    });
+    google.maps.event.addListener(marker_rapla, 'click', function() {
+	 new google.maps.InfoWindow({content: "Raplamaa - juhib SDE, hääli 3455 ehk 28% valijaskonnast"}).open(map, marker_rapla);
+		});
+    /////////////////////////
+    var marker_tartu =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.406029,26.801491),
+	    map: map,
+	    title: 'Tartumaa',
+	    icon: "green_MarkerY.png"
+    });
+    google.maps.event.addListener(marker_tartu, 'click', function() {
+	 new google.maps.InfoWindow({content: "juhib Reform, hääli 23456 ehk 39% valijaskonnast"}).open(map, marker_tartu);
+		});
+    ////////////////////////
+    var marker_harju =  new google.maps.Marker({
+	    position: new google.maps.LatLng(59.386381,25.235596),
+	    map: map,
+	    title: 'Harjumaa',
+	    icon: "orange_MarkerL.png"
+    });
+    google.maps.event.addListener(marker_harju, 'click', function() {
+	 new google.maps.InfoWindow({content: "Harjumaa - juhib Keskerakond, hääli 7565 ehk 23% valijaskonnast"}).open(map, marker_harju);
+		});
+    ////////////////////////////
+    var marker_jarva =  new google.maps.Marker({
+	    position: new google.maps.LatLng(58.907483,25.504761),
+	    map: map,
+	    title: 'Järvamaa',
+	    icon: "pink_MarkerB.png"
+    });
+    google.maps.event.addListener(marker_jarva, 'click', function() {
+	 new google.maps.InfoWindow({content: "Järvamaa - juhib SDE, hääli 2565 ehk 28% valijaskonnast"}).open(map, marker_jarva);
+		});
+
+}
+	google.maps.event.addDomListener(window, 'load', initialize);
+  
+    
+  </script>
 	<script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -188,51 +254,9 @@
 				<!-- Statistika piirkonna content algus -->
 				<div class="statPiirkondContent">
 				
-				<div id="map" style="width: 480px; height: 400px;">
+				<div id="piirkondlik" style="width: 480px; height: 400px;">
 
-  <script type="text/javascript">
-    var locations = [
-                      ['Saaremaa - juhib IRL, hääli 5433 ehk 34% valijaskonnast', 58.551061,22.598877, 15],
-                      ['Raplamaa - juhib SDE, hääli 3455 ehk 28% valijaskonnast', 58.8862,24.741211, 14],
-                      ['Põlvamaa - juhib Reform, hääli 5214 ehk 42% valijaskonnast', 58.134471,27.203522, 13],
-                      ['Lääne-Virumaa - juhib SDE, hääli 23345 ehk 30% valijaskonnast', 59.333189,26.331482, 12],
-                      ['Läänemaa - juhib Keskerakond, hääli 7465 ehk 26% valijaskonnast', 58.924499,23.799133, 11],
-                      ['Jõgevamaa - juhib SDE, hääli 3673 ehk 33% valijaskonnast', 58.711189,26.383667, 10],
-                      ['Ida-Virumaa - juhib Keskerakond, hääli 7632 ehk 23% valijaskonnast', 59.284123,27.397156, 9],
-                      ['Hiiumaa - juhib SDE, hääli 6245 ehk 45% valijaskonnast', 58.935839,22.589264, 8],
-                      ['Võrumaa - juhib Reform, hääli 2562 ehk 33% valijaskonnast', 57.82428,26.854706, 7],
-                      ['Valgamaa - juhib Keskerakond, hääli 2456 ehk 44% valijaskonnast', 57.945472,26.166687, 6],
-                      ['Harjumaa - juhib Keskerakond, hääli 7565 ehk 23% valijaskonnast', 59.386381,25.235596, 4],
-                      ['Tartumaa - juhib Reform, hääli 23456 ehk 39% valijaskonnast', 58.406029,26.801491, 5],
-                      ['Järvamaa - juhib SDE, hääli 2565 ehk 28% valijaskonnast', 58.907483,25.504761, 3],
-                      ['Pärnumaa - juhib IRL, hääli 7644 ehk 26% valijaskonnast', 58.476465,24.691772, 2],
-                      ['Viljandimaa - juhib SDE, hääli 3456 ehk 34% valijaskonnast', 58.318145,25.565186, 1]
-    ];
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 7,
-      center: new google.maps.LatLng(58.665513,25.519409),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-
-    var infowindow = new google.maps.InfoWindow();
-
-    var marker, i;
-
-    for (i = 0; i < locations.length; i++) {  
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
-      });
-
-      google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
-  </script>
   </div>
 
 					<a id="printButton" onclick="window.print()">Prindi</a>
