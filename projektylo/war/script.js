@@ -283,5 +283,39 @@ $(document).ready(function()
 
 
 //erakonna funktsioon lõpp
+   
+   // google maps script algus
+   var marker = new google.maps.Marker({
+       map: theMap,
+       draggable: true,
+       position: new google.maps.LatLng(58.384438, 26.663818),
+       visible: true
+      });
+              
+      var boxText = document.createElement("div");
+      boxText.style.cssText = "border: 1px solid black; margin-top: 8px; background: yellow; padding: 5px;";
+      boxText.innerHTML = "City Hall, Sechelt<br>British Columbia<br>Canada";
+              
+      var myOptions = {
+               content: boxText
+              ,disableAutoPan: false
+              ,maxWidth: 0
+              ,pixelOffset: new google.maps.Size(-140, 0)
+              ,zIndex: null
+              ,boxStyle: { 
+                background: "url('tipbox.gif') no-repeat"
+                ,opacity: 0.75
+                ,width: "280px"
+               }
+              ,closeBoxMargin: "10px 2px 2px 2px"
+              ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+              ,infoBoxClearance: new google.maps.Size(1, 1)
+              ,isHidden: false
+              ,pane: "floatPane"
+              ,enableEventPropagation: false
+      };
+
+      var ib = new InfoBox(myOptions);
+      ib.open(theMap, marker);
 			 
 });
